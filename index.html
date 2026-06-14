@@ -14,7 +14,9 @@
             background-color: #fdfcf9; /* Premium warm newsprint background */
             color: #111111;
             line-height: 1.5;
-            padding: 10px;
+            padding: 0;
+            overflow-x: hidden;
+            transition: margin-left 0.3s ease;
         }
         .container { max-width: 1300px; margin: 0 auto; padding: 0 15px; }
         
@@ -26,7 +28,132 @@
             letter-spacing: 0.08em;
             font-weight: 700;
         }
- 
+
+        /* ==========================================================================
+           SIDEBAR DRAWER & NAVIGATION
+           ========================================================================== */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 320px;
+            height: 100%;
+            background-color: #f7f5f0;
+            border-right: 3px double #111;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .sidebar.open {
+            left: 0;
+        }
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 999;
+            display: none;
+        }
+        .sidebar-overlay.active {
+            display: block;
+        }
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #111;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .sidebar-title {
+            font-family: "Times New Roman", serif;
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #111;
+            line-height: 1;
+        }
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-nav li {
+            margin-bottom: 5px;
+        }
+        .sidebar-nav a {
+            display: block;
+            padding: 10px 15px;
+            color: #111;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border-bottom: 1px dashed #cfc9bc;
+            transition: background 0.2s, padding-left 0.2s;
+        }
+        .sidebar-nav a:hover, .sidebar-nav a.active {
+            background-color: #eae6df;
+            padding-left: 20px;
+            color: #990000;
+            border-bottom: 1px solid #111;
+        }
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #111;
+            font-size: 0.8rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Nav Toggle bar */
+        .navigation-bar {
+            border-bottom: 1px solid #111;
+            background-color: #fdfcf9;
+            padding: 10px 0;
+        }
+        .navigation-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-toggle {
+            background-color: #111;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+        .menu-toggle:hover {
+            background-color: #444;
+        }
+        .active-category-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #990000;
+            font-family: "Times New Roman", Georgia, serif;
+        }
+
         /* ==========================================================================
            FINANCIAL & WEATHER TICKERS
            ========================================================================== */
@@ -40,16 +167,17 @@
         .market-data span { margin-right: 15px; }
         .market-up { color: #00cc66; }
         .market-down { color: #ff4444; }
- 
+
         /* ==========================================================================
            MASTHEAD (MAIN LOGO ZONE)
            ========================================================================== */
-        header { text-align: center; padding: 30px 0 10px 0; }
+        header { text-align: center; padding: 20px 0 10px 0; }
         header h1 {
             font-size: 4.5rem;
             font-weight: 900;
             letter-spacing: -1px;
             margin-bottom: 5px;
+            cursor: pointer;
         }
         .meta-strip {
             border-top: 1px solid #111;
@@ -59,7 +187,7 @@
             display: flex;
             justify-content: space-between;
         }
- 
+
         /* ==========================================================================
            SPONSOR PLACEMENT
            ========================================================================== */
@@ -73,7 +201,7 @@
         .sponsor-banner p { font-size: 0.7rem; color: #777; margin-bottom: 4px; }
         .sponsor-banner a { color: #b8860b; font-weight: bold; text-decoration: none; font-size: 1.05rem; }
         .sponsor-banner a:hover { text-decoration: underline; }
- 
+
         /* ==========================================================================
            3-COLUMN LAYOUT SYSTEM
            ========================================================================== */
@@ -87,19 +215,19 @@
         /* Column Dividers */
         .col-left { border-right: 1px solid #e2ded5; padding-right: 15px; }
         .col-right { border-left: 1px solid #e2ded5; padding-left: 15px; }
- 
+
         /* Typography & Story Styles */
         .story-tag { color: #990000; display: block; margin-bottom: 6px; }
         .main-title { font-size: 2.5rem; line-height: 1.1; font-weight: 700; margin-bottom: 12px; }
         .sub-title { font-size: 1.4rem; line-height: 1.2; font-weight: 700; margin-bottom: 8px; }
-        .sub-title a, .main-title a { color: #111; text-decoration: none; }
+        .sub-title a, .main-title a { color: #111; text-decoration: none; cursor: pointer; }
         .sub-title a:hover, .main-title a:hover { color: #555; }
         
         p.snippet { font-size: 0.98rem; color: #333; margin-bottom: 15px; text-align: justify; }
         .author { color: #666; font-size: 0.8rem; margin-bottom: 12px; }
         
         .divider-line { border-bottom: 1px dashed #cfc9bc; margin: 20px 0; }
- 
+
         /* Graphic Placeholders */
         .news-img-box {
             width: 100%;
@@ -113,6 +241,7 @@
             color: #777;
             font-style: italic;
             overflow: hidden;
+            position: relative;
         }
         .news-img-box img {
             width: 100%;
@@ -121,7 +250,7 @@
             object-fit: cover;
             display: block;
         }
- 
+
         /* ==========================================================================
            INTERACTIVE PUZZLE FEATURES
            ========================================================================== */
@@ -160,7 +289,83 @@
         }
         .puzzle-box button:hover { background-color: #444; }
         #puzzle-feedback { margin-top: 10px; font-weight: bold; font-size: 0.9rem; text-align: center; }
- 
+
+        /* ==========================================================================
+           ARTICLE MODAL POPUP
+           ========================================================================== */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background-color: #fdfcf9;
+            max-width: 750px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 3px double #111;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #111;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        .modal-body {
+            margin-top: 15px;
+        }
+        .modal-body h2 {
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            font-family: "Times New Roman", serif;
+        }
+        .modal-meta {
+            border-top: 1px solid #e2ded5;
+            border-bottom: 1px solid #e2ded5;
+            padding: 8px 0;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .modal-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #222;
+            text-align: justify;
+        }
+        .modal-text p {
+            margin-bottom: 15px;
+            text-indent: 20px;
+        }
+        .modal-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 1px solid #dcd7cd;
+        }
+
         /* ==========================================================================
            RESPONSIVE MEDIA SYSTEM
            ========================================================================== */
@@ -176,7 +381,28 @@
     </style>
 </head>
 <body>
- 
+
+    <!-- Sidebar Drawer System -->
+    <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar(false)"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">Sections</span>
+            <button class="close-btn" onclick="toggleSidebar(false)">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#" class="active" id="nav-front" onclick="loadCategory('front')">🗞️ Front Page</a></li>
+            <li><a href="#" id="nav-world" onclick="loadCategory('world')">🌎 World & Global Affairs</a></li>
+            <li><a href="#" id="nav-local" onclick="loadCategory('local')">🏘️ Local Economy</a></li>
+            <li><a href="#" id="nav-science" onclick="loadCategory('science')">🔬 Science Desk</a></li>
+            <li><a href="#" id="nav-fashion" onclick="loadCategory('fashion')">🧥 Fashion & Lifestyle</a></li>
+            <li><a href="#" id="nav-puzzles" onclick="loadCategory('puzzles')">🧩 Puzzles & Leisure</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>The Metropolitan Chronicle</p>
+            <p style="margin-top: 5px; font-size: 0.75rem;">Est. 1902 — All Rights Reserved</p>
+        </div>
+    </div>
+
     <!-- Upper Financial Data Strip -->
     <div class="ticker-wrap ui-label">
         <div class="container">
@@ -190,105 +416,439 @@
             </div>
         </div>
     </div>
- 
+
+    <!-- Sticky Navigation Utility Bar -->
+    <div class="navigation-bar">
+        <div class="container">
+            <button class="menu-toggle ui-label" onclick="toggleSidebar(true)">
+                <span>☰</span> Sections
+            </button>
+            <span class="active-category-display" id="section-header-display">Front Page Edition</span>
+        </div>
+    </div>
+
     <div class="container">
         
         <!-- Main Header -->
         <header>
-            <h1>The Metropolitan Chronicle</h1>
+            <h1 onclick="loadCategory('front')">The Metropolitan Chronicle</h1>
             <div class="meta-strip ui-label">
                 <span>Volume CXXIV — No. 42</span>
                 <span class="live-date">Monday, June 8, 2026</span>
                 <span>Final Print Edition</span>
             </div>
         </header>
- 
+
         <!-- Paid Sponsor Space -->
         <div class="sponsor-banner ui-label">
             <p>Sponsored Content</p>
             <a href="#" target="_blank">☕ Fuel Your Morning: Get 20% off at Roasted Bean Coffee Co. with code 'CHRONICLE'</a>
         </div>
- 
+
         <!-- Front Page 3-Column Content Frame -->
-        <main class="page-grid">
-            
-            <!-- COLUMN 1: LOCAL & BUSINESS AFFAIRS -->
-            <aside class="col-left">
-                <span class="story-tag ui-label">Local Economy</span>
-                <h3 class="sub-title"><a href="#">City Council Standardizes 'Nap Hours' for Remote Workforces</a></h3>
-                <p class="snippet">In a sweeping 7-2 vote, local municipal agencies established a mandatory quiet framework between 2:00 PM and 3:00 PM, citing monumental productivity leaps...</p>
-                <p class="author ui-label">By Clara Vance</p>
- 
-                <div class="divider-line"></div>
- 
-                <span class="story-tag ui-label">Science Desk</span>
-                <h3 class="sub-title"><a href="#">Botanists Confirm Plants Grow Shorter When Subjected to Sarcasm</a></h3>
-                <p class="snippet">A three-year study reveals that common ferns exposed to witty critiques and snarky comments grew nearly 12% shorter than those given standard classic rock music backgrounds...</p>
-                <p class="author ui-label">By Dr. Julian Vance</p>
-            </aside>
- 
-            <!-- COLUMN 2: PRIMARY LEAD STORIES -->
-            <section class="col-main">
-                <span class="story-tag ui-label" style="font-size: 0.9rem; font-weight: bold;">Global Dynamic Alert</span>
-                <h2 class="main-title"><a href="#">Deep-Sea Submersible Discovers Ancient civilization built entirely from intact keyboards</a></h2>
-                
-                <div class="news-img-box">
-                    <img src="ancient_undersea_city.jpeg" alt="Deep sea layout scan" class="news-image">
-                </div>
- 
-                <p class="snippet"><strong>PACIFIC TRENCH —</strong> Maritime research divisions shocks global geological frameworks early Monday afternoon following tactical ocean floor scans. Researchers mapped clear architectural layouts matching standard typing layouts spanning multiple square kilometers across deep shelf valleys...</p>
-                
-                <p class="snippet">"We pressed down on a localized geographic ridge structure, and an acoustic sound pattern vibrated cleanly back up to our ship deck," Chief Officer Echo Finwright noted during a satellite status briefing.</p>
-                <p class="author ui-label">By Senior Bureau Chief Arthur Pendelton</p>
-            </section>
- 
-            <!-- COLUMN 3: PUZZLES & METROPOLITAN LIFESTYLE -->
-            <aside class="col-right">
-                
-                <!-- Daily Interactive Word Jumble Box -->
-                <div class="puzzle-box">
-                    <span class="story-tag ui-label">The Daily Mind-Bender</span>
-                    <h3 class="ui-label">Word Jumble Challenge</h3>
-                    <p style="font-size: 0.9rem; margin-bottom: 12px; font-family: sans-serif;">Unscramble the media-related word below:</p>
-                    
-                    <div class="scrambled-word" id="jumble-container">JOURNAL</div>
-                    
-                    <input type="text" id="puzzle-input" class="ui-label" placeholder="Type your guess here..." autocomplete="off">
-                    <button type="button" class="ui-label" onclick="checkPuzzleAnswer()">Submit Guess</button>
-                    
-                    <div id="puzzle-feedback"></div>
-                </div>
- 
-                <div class="divider-line"></div>
- 
-                <span class="story-tag ui-label">Fashion Trends</span>
-                <h3 class="sub-title"><a href="#">Are Polka Dot Ties Making a Defensive Comeback?</a></h3>
-                <p class="snippet">Leading design houses throughout metropolitan corridors report surprising shifts in corporate neckwear metrics as traditional settings look backwards...</p>
-            </aside>
- 
+        <main class="page-grid" id="main-content-grid">
+            <!-- Dynamic Content gets injected here -->
         </main>
     </div>
- 
-    <!-- JavaScript logic handling the interactive puzzle mechanics -->
+
+    <!-- Article Detail Modal -->
+    <div class="modal" id="article-modal" onclick="closeModalOnOuterClick(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeArticle()">&times;</button>
+            <div class="modal-body" id="modal-article-body">
+                <!-- Swapped dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript logic handling the interactive news desk system & puzzle -->
     <script>
+        // Article Database for Category Navigation
+        const newsDatabase = {
+            front: {
+                left: [
+                    {
+                        tag: "Local Economy",
+                        title: "City Council Standardizes 'Nap Hours' for Remote Workforces",
+                        snippet: "In a sweeping 7-2 vote, local municipal agencies established a mandatory quiet framework between 2:00 PM and 3:00 PM, citing monumental productivity leaps...",
+                        author: "Clara Vance",
+                        content: "In a historic and sweeping 7-2 vote early this morning, the Metropolitan City Council voted to formally recognize and enforce 'Nap Hours' for remote corporate employees. The newly established mandate creates a system-wide quiet period between the hours of 2:00 PM and 3:00 PM daily. Regional administrators cited data from a pilot study showing a monumental 34% increase in late-afternoon efficiency when employees were actively encouraged to disconnect and rest. Critics, however, warn of potential logistical gridlocks in real-time customer support sectors."
+                    },
+                    {
+                        tag: "Science Desk",
+                        title: "Botanists Confirm Plants Grow Shorter When Subjected to Sarcasm",
+                        snippet: "A three-year study reveals that common ferns exposed to witty critiques and snarky comments grew nearly 12% shorter than those given standard classic rock music backgrounds...",
+                        author: "Dr. Julian Vance",
+                        content: "A bizarre three-year research paper released by the Botanical Research Institute of Maryland has proven that vegetation responds poorly to negative humor. In controlled environments, common house ferns exposed to sarcastic monologues grew 12% slower and shorter than ferns exposed to positive classical music or neutral podcasts. 'They seem to sense the lack of genuine warmth in the delivery,' noted Dr. Julian Vance. Future trials will study whether tomatoes have an active resilience to dry British humor."
+                    }
+                ],
+                main: {
+                    tag: "Global Dynamic Alert",
+                    title: "Deep-Sea Submersible Discovers Ancient civilization built entirely from intact keyboards",
+                    image: "ancient_undersea_city.jpeg",
+                    fallbackImage: "https://images.unsplash.com/photo-1546074177-ffedd1d85d4b?auto=format&fit=crop&w=800&q=80",
+                    imageAlt: "Deep sea layout scan representing mysterious key structures",
+                    snippet: "MARITIME RESEARCH DIVISIONS shock global geological frameworks following tactical ocean floor scans. Researchers mapped clear architectural layouts matching standard typing layouts spanning multiple square kilometers across deep shelf valleys...",
+                    author: "Senior Bureau Chief Arthur Pendelton",
+                    content: "MARITIME RESEARCH DIVISIONS have shocked global geological networks early Monday afternoon following tactical ocean floor scans near the Pacific Trench. Remote probes mapped clean architectural layouts matching standard keyboard profiles. Researchers recorded massive key-like basalt structures aligned in perfect QWERTY formation, stretching across multiple square kilometers of a deep shelf valley.<br><br>'We pushed down on a localized geographic ridge resembling a massive spacebar, and an acoustic sound pattern vibrated cleanly back up to our ship deck,' Chief Officer Echo Finwright noted during an emergency satellite briefing. Scientists have ruled out volcanic formations, hinting at an ancient society deeply obsessed with communication technology."
+                },
+                right: {
+                    hasPuzzle: true,
+                    extraStory: {
+                        tag: "Fashion Trends",
+                        title: "Are Polka Dot Ties Making a Defensive Comeback?",
+                        snippet: "Leading design houses throughout metropolitan corridors report surprising shifts in corporate neckwear metrics as traditional settings look backwards...",
+                        author: "Elise Montgomery",
+                        content: "Tailors on the high streets are reporting an unprecedented run on vintage silk polka dot patterns. Once banished to the back of wardrobes as an archaic symbol of mid-century boardrooms, the polka dot tie has made an aggressive, defensive return to corporate battlegrounds. Trend analyst Elise Montgomery reports that employees are wearing them as 'ironic armor' against mechanical AI-driven workplace evaluations."
+                    }
+                }
+            },
+            world: {
+                left: [
+                    {
+                        tag: "World News",
+                        title: "Global Cheese Alliance Resolves Great Fondue Dispute of 2026",
+                        snippet: "A high-stakes diplomatic conference in Geneva has successfully brokered a peace treaty between competing Alpine dairy syndicates, stabilizing global prices...",
+                        author: "Henri LeBlanc",
+                        content: "Following six weeks of high-tension trade talks, representatives from Switzerland, France, and Italy have ratified the Accord of Gruyère. The dispute, which threatened to halt cheese shipments across major European economic blocks, originated from a disagreement regarding the correct emulsification ratios for export-grade fondue. With the treaty signed, global cheese futures have stabilized, bringing immense relief to restaurateurs worldwide."
+                    }
+                ],
+                main: {
+                    tag: "International Update",
+                    title: "Atmospheric Acoustic Hum Confirmed Over Northern Hemisphere",
+                    image: "sky_acoustic_phenomenon.jpeg",
+                    fallbackImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+                    imageAlt: "Stylized atmospheric light scan",
+                    snippet: "A persistent, low-frequency sound resembling a distant cello has been reported by millions across coastal cities. Atmospheric geophysicists suggest stratospheric wind friction might be to blame...",
+                    author: "Marcus Finch",
+                    content: "An atmospheric mystery of unprecedented scale has unfolded over the last 48 hours. Millions of residents stretching from Oslo to Seattle have reported hearing a gentle, harmonic hum vibrating through the air. Dubbed 'The Stratospheric Sonata,' the pitch remains a steady 110Hz. While amateur doomsday theorists point to magnetic anomalies, atmospheric geophysicists confidently claim it is merely the result of unusual seasonal jet stream friction rubbing against clean pocket clouds in the upper troposphere."
+                },
+                right: {
+                    hasPuzzle: false,
+                    extraStory: {
+                        tag: "Global Science",
+                        title: "Desert Solar Grid Accidental Paradise for Endangered Burrowing Owls",
+                        snippet: "A massive clean-energy plant in Mojave desert has become an unexpected sanctuary for local owls seeking shade from the harsh sun...",
+                        author: "Sarah Sterling",
+                        content: "In a heartwarming twist for environmentalists, the Mojave Solar Expansion Project has recorded a 300% increase in local burrowing owl populations. The thousands of giant mirrors provide clean, cool shade zones during the brutal midday heat, shielding the owls from aerial predators. The facility has hired dedicated ecological guards to ensure the birds can nesting safely alongside the engineering teams."
+                    }
+                }
+            },
+            local: {
+                left: [
+                    {
+                        tag: "Municipal Affairs",
+                        title: "Community Garden Micro-Grants Yield Gigantic Giant Squash",
+                        snippet: "A small-scale neighborhood fund has sparked a vegetable arms race in the East District, culminating in a 400-pound record-breaking squash...",
+                        author: "Nate Reynolds",
+                        content: "What began as a $500 community grant for organic topsoil has transformed the East District allotment into a highly competitive horticultural arena. Local retired mechanic Albert Miller unveiled his masterpiece: a monumental 412-pound green squash nurtured on custom compost formulas. 'The secret is talking to it softly at midnight,' Miller whispered to our regional agricultural correspondent."
+                    }
+                ],
+                main: {
+                    tag: "Metropolitan Business",
+                    title: "Vintage Typewriter Shops Face Supply Shortage as Tech Detox Hits Peaks",
+                    image: "typewriter_shop.jpeg",
+                    fallbackImage: "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?auto=format&fit=crop&w=800&q=80",
+                    imageAlt: "Row of classic mechanical typewriters",
+                    snippet: "A cultural pivot away from screens has left regional boutique typewriter mechanics empty-handed. Waiting lists for manual ribbon machines have ballooned to six months...",
+                    author: "Penelope Cruz",
+                    content: "A profound digital detox movement has swept the city's creative workforce. Disenchanted with constant screen notifications, novelists, poets, and lawyers are flocking to analog alternatives. Standard Smith-Corona and Remington models have surged in value by over 400%. Boutique repair shops are reporting historic shortages of ink ribbons and carriage springs, prompting many to scour rural estate sales to satisfy the ravenous local demand."
+                },
+                right: {
+                    hasPuzzle: false,
+                    extraStory: {
+                        tag: "Transit Updates",
+                        title: "Subway System to Introduce Quiet Cars for Silent Reading and Knitting",
+                        snippet: "Commuters celebrate as transit authorities designate rear rail cars exclusively for quiet, analog hobbies and zero mobile phone activity...",
+                        author: "Marcus Vance",
+                        content: "Starting next Monday, the City Transit Commission will trial 'The Sanctuary Cabin' on the Red Line. Passengers boarding these specific rear cars must agree to silence their phones, refrain from talking, and engage solely in peaceful, quiet activities like reading physical media, sketching, or knitting. Early commuter polls suggest a massive public interest."
+                    }
+                }
+            },
+            science: {
+                left: [
+                    {
+                        tag: "Astrophysics",
+                        title: "Deep Space Telescope Detects Repetitive Patterns from Kepler-186f",
+                        snippet: "Astronomers confirm highly rhythmic electromagnetic pulses originating from a neighboring system, though they suspect cosmic dust friction over alien communications...",
+                        author: "Dr. Aris Thorne",
+                        content: "Astronomers at the Deep Space Observatory have recorded a series of highly rhythmic, recurring signals coming from the habitable exoplanet Kepler-186f. Spanning a exact 12-second cycle, the pulses resemble standard telemetry data. However, lead researcher Dr. Thorne urged patience: 'Before we call the press for first contact, we are thoroughly testing if a spinning magnetar or specialized dust cloud friction is generating these beautifully clean pulses.'"
+                    }
+                ],
+                main: {
+                    tag: "Environmental Discovery",
+                    title: "Puddles in Central Park Found to Defy Standard Gravity Rules",
+                    image: "gravity_puddle.jpeg",
+                    fallbackImage: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80",
+                    imageAlt: "Stylized reflection in park puddle",
+                    snippet: "A peculiar physical anomaly has scientists baffled as rainwater in specific central rocky trails forms slightly domed structures that refuse to spill over...",
+                    author: "Lana Foster",
+                    content: "Local university physicists have set up temporary research tents around several rock pools in Central Park. Due to an unexplained, microscopic mineral deposit left behind by recent meteor showers, the rainwater in these specific depressions exhibits immense surface tension. This creates beautiful, domed water structures that rise nearly two inches above the stone surface without breaking or spilling."
+                },
+                right: {
+                    hasPuzzle: false,
+                    extraStory: {
+                        tag: "Neurology Briefing",
+                        title: "Why Your Brain Prefers the Scent of Vintage Books to E-Readers",
+                        snippet: "New neurological scans explain why the chemical breakdown of paper fibers triggers deep nostalgia centers inside the human amygdala...",
+                        author: "Dr. Evelyn Wu",
+                        content: "A study published in the Brain and Behavior Journal reveals that as physical paper ages, the slow chemical breakdown of cellulose produces trace amounts of vanillin and almond-like compounds. These specific scents bypass normal cognitive processing centers, traveling straight to the amygdala. This triggers an instant sensation of safety, nostalgia, and calm that digital screens simply cannot replicate."
+                    }
+                }
+            },
+            fashion: {
+                left: [
+                    {
+                        tag: "Metropolitan Style",
+                        title: "Bowler Hats Witness Surprising Revival Among Tech Entrepreneurs",
+                        snippet: "Move over casual hoodies—traditional formal headwear is finding a modern niche in the high-stakes startup communities...",
+                        author: "Douglas Vance",
+                        content: "In a bizarre turn of sartorial trends, executive founders in major technology parks are discarding their generic silicone-molded athletic shoes and hooded sweatshirts in favor of tailored suits and authentic wool-felt bowler hats. Proponents claim the structured look commands immediate respect in modern venture capital pitches."
+                    }
+                ],
+                main: {
+                    tag: "Sartorial Investigation",
+                    title: "The Ultimate Death of Fast Fashion as Bespoke Linen Sweeps Summer",
+                    image: "linen_weaving.jpeg",
+                    fallbackImage: "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=800&q=80",
+                    imageAlt: "Bespoke neutral textured fabric close up",
+                    snippet: "Economic shifts combined with environmental awareness have fueled an unprecedented demand for localized weaving circles and custom-fit hemp garbs...",
+                    author: "Gemma Fairchild",
+                    content: "The age of throwaway garments is facing a sharp collapse. Consumers are increasingly turning to small, regional weaving collectives that offer lifetime warranties on bespoke linen and hemp garments. 'People are realizing that having four perfectly tailored, breathable items is infinitely superior to owning fifty synthetic shirts that deteriorate in three washes,' says designer Gemma Fairchild."
+                },
+                right: {
+                    hasPuzzle: false,
+                    extraStory: {
+                        tag: "Grooming Trends",
+                        title: "Monocles and Vintage Pocket Watches Enter Gen-Z Mainstream",
+                        snippet: "Pocket watches and single-glass spectacles are flying off vintage store shelves as youth culture rejects smart wear...",
+                        author: "Alistair Sterling",
+                        content: "Rejecting wearable smartwatches that constantly track health metrics and push advertisements, younger generations are opting for total mechanical independence. Antique brass pocket watches and classic wire-framed monocles have become the ultimate counter-culture accessories of the year."
+                    }
+                }
+            },
+            puzzles: {
+                left: [
+                    {
+                        tag: "Brain Training",
+                        title: "Solving Cryptic Crosswords Proven to Delay Mental Fatigue",
+                        snippet: "Long-term study tracks cognitive agility benefits of solving linguistic and pattern puzzles compared to scrolling feeds...",
+                        author: "Prof. Arthur Pendelton",
+                        content: "A decades-long study of senior citizens has concluded that engaging with cryptic linguistic patterns, such as complex crosswords and word jumbles, creates strong neural pathways. This acts as a protective buffer against normal age-related cognitive fatigue, proving that challenging your mind is the best daily exercise you can perform."
+                    }
+                ],
+                main: {
+                    tag: "Interactive Spotlight",
+                    title: "The Metropolitan Daily Mind-Bender: Word Jumble Challenge",
+                    image: "puzzle_graphics.jpeg",
+                    fallbackImage: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80",
+                    imageAlt: "Stylized abstract grid",
+                    snippet: "Challenge your vocabulary skills with our community-loved daily word jumble below. Unscramble the letters to prove your linguistic prowess to our editorial staff!",
+                    author: "The Puzzle Master",
+                    content: "Every morning, our editorial team handcrafts a special linguistic puzzle to test the critical faculties of our global readership. This feature, which dates back to our original print editions of 1904, remains one of our most celebrated traditions. Scroll to our interactive puzzle box on the right to test your resolve!"
+                },
+                right: {
+                    hasPuzzle: true,
+                    extraStory: null
+                }
+            }
+        };
+
         // Puzzle state setup
         const wordPool = [
             { scrambled: "N A B A N A", clean: "BANANA" },
             { scrambled: "E C I L C O N H R", clean: "CHRONICLE" },
-            { scrambled: "W E N S P A P E R", clean: "NEWSPAPER" }
+            { scrambled: "W E N S P A P E R", clean: "NEWSPAPER" },
+            { scrambled: "E D I T O R I A L", clean: "EDITORIAL" },
+            { scrambled: "S U B M E R S I B L E", clean: "SUBMERSIBLE" }
         ];
         
-        // Pick a random jumble configuration on load
-        const selectedPuzzle = wordPool[Math.floor(Math.random() * wordPool.length)];
-        document.getElementById("jumble-container").innerText = selectedPuzzle.scrambled;
- 
+        let selectedPuzzle = wordPool[0];
+
+        // On document load, default to Front Page
+        window.onload = function() {
+            loadCategory('front');
+            initializePuzzle();
+        };
+
+        // Sidebar Navigation Toggles
+        function toggleSidebar(open) {
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("overlay");
+            if (open) {
+                sidebar.classList.add("open");
+                overlay.classList.add("active");
+            } else {
+                sidebar.classList.remove("open");
+                overlay.classList.remove("active");
+            }
+        }
+
+        // Section Loader
+        function loadCategory(categoryKey) {
+            // Update active state in sidebar UI
+            const links = document.querySelectorAll(".sidebar-nav a");
+            links.forEach(link => link.classList.remove("active"));
+            
+            const activeId = `nav-${categoryKey}`;
+            const activeLink = document.getElementById(activeId);
+            if (activeLink) activeLink.classList.add("active");
+
+            // Update Page Header Label
+            const headerDisplay = document.getElementById("section-header-display");
+            const titles = {
+                front: "Front Page Edition",
+                world: "World & Global Affairs",
+                local: "Local & Business Economy",
+                science: "The Science Desk",
+                fashion: "Fashion, Style & Lifestyle",
+                puzzles: "The Puzzles & Leisure Desk"
+            };
+            headerDisplay.innerText = titles[categoryKey] || "Editorial Desks";
+
+            // Grab the corresponding content block
+            const data = newsDatabase[categoryKey];
+            const mainGrid = document.getElementById("main-content-grid");
+
+            if (!data) return;
+
+            // Close sidebar
+            toggleSidebar(false);
+
+            // Construct Column 1 (Left Column)
+            let leftColHTML = "";
+            data.left.forEach((story, idx) => {
+                leftColHTML += `
+                    <span class="story-tag ui-label">${story.tag}</span>
+                    <h3 class="sub-title"><a onclick="openArticle(${JSON.stringify(story).replace(/"/g, '&quot;')})">${story.title}</a></h3>
+                    <p class="snippet">${story.snippet}</p>
+                    <p class="author ui-label">By ${story.author}</p>
+                `;
+                if (idx < data.left.length - 1) {
+                    leftColHTML += `<div class="divider-line"></div>`;
+                }
+            });
+
+            // Construct Column 2 (Main Lead Story Column)
+            const lead = data.main;
+            const mainColHTML = `
+                <span class="story-tag ui-label" style="font-size: 0.9rem; font-weight: bold;">${lead.tag}</span>
+                <h2 class="main-title"><a onclick="openArticle(${JSON.stringify(lead).replace(/"/g, '&quot;')})">${lead.title}</a></h2>
+                
+                <div class="news-img-box">
+                    <img src="${lead.image}" alt="${lead.imageAlt}" onerror="this.onerror=null; this.src='${lead.fallbackImage}';">
+                </div>
+
+                <p class="snippet"><strong>SUMMARY —</strong> ${lead.snippet}</p>
+                <p class="author ui-label">By ${lead.author}</p>
+                <button class="ui-label" style="background: none; border: 1px solid #111; padding: 6px 12px; margin-top: 10px; cursor: pointer; font-weight: bold; font-size: 0.75rem;" onclick="openArticle(${JSON.stringify(lead).replace(/"/g, '&quot;')})">Read Full Chronicle</button>
+            `;
+
+            // Construct Column 3 (Right Column: Puzzle & Features)
+            let rightColHTML = "";
+            if (data.right.hasPuzzle) {
+                rightColHTML += `
+                    <div class="puzzle-box">
+                        <span class="story-tag ui-label">The Daily Mind-Bender</span>
+                        <h3 class="ui-label" style="font-family: sans-serif; font-size: 1rem; border-bottom: 2px solid #111; padding-bottom: 4px; margin-bottom: 12px;">Word Jumble</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 12px; font-family: sans-serif;">Unscramble the media-related word below:</p>
+                        
+                        <div class="scrambled-word" id="jumble-container">${selectedPuzzle.scrambled}</div>
+                        
+                        <input type="text" id="puzzle-input" class="ui-label" placeholder="Type your guess here..." autocomplete="off">
+                        <button type="button" class="ui-label" onclick="checkPuzzleAnswer()">Submit Guess</button>
+                        
+                        <div id="puzzle-feedback"></div>
+                    </div>
+                `;
+            }
+
+            if (data.right.extraStory) {
+                if (data.right.hasPuzzle) {
+                    rightColHTML += `<div class="divider-line"></div>`;
+                }
+                const extra = data.right.extraStory;
+                rightColHTML += `
+                    <span class="story-tag ui-label">${extra.tag}</span>
+                    <h3 class="sub-title"><a onclick="openArticle(${JSON.stringify(extra).replace(/"/g, '&quot;')})">${extra.title}</a></h3>
+                    <p class="snippet">${extra.snippet}</p>
+                `;
+            }
+
+            // Combine together in DOM
+            mainGrid.innerHTML = `
+                <aside class="col-left">${leftColHTML}</aside>
+                <section class="col-main">${mainColHTML}</section>
+                <aside class="col-right">${rightColHTML}</aside>
+            `;
+
+            // Keep scroll positioned back at top of content window
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Article Modal Open
+        function openArticle(story) {
+            const modal = document.getElementById("article-modal");
+            const modalBody = document.getElementById("modal-article-body");
+
+            let imageMarkup = "";
+            if (story.image) {
+                imageMarkup = `<img src="${story.image}" class="modal-img" onerror="this.onerror=null; this.src='${story.fallbackImage || 'https://images.unsplash.com/photo-1546074177-ffedd1d85d4b?auto=format&fit=crop&w=800&q=80'}';" alt="Lead Graphic">`;
+            }
+
+            modalBody.innerHTML = `
+                <span class="story-tag ui-label">${story.tag || "Newsroom Special"}</span>
+                <h2>${story.title}</h2>
+                <div class="modal-meta ui-label">
+                    <span>By ${story.author || "Staff Writer"}</span>
+                    <span>MD Chronicle Archives</span>
+                </div>
+                ${imageMarkup}
+                <div class="modal-text">
+                    <p>${story.content}</p>
+                </div>
+            `;
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden"; // Disable backdrop scroll
+        }
+
+        // Close Article Modal
+        function closeArticle() {
+            const modal = document.getElementById("article-modal");
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal on outer background click
+        function closeModalOnOuterClick(event) {
+            if (event.target.id === "article-modal") {
+                closeArticle();
+            }
+        }
+
+        // Puzzle Logic
+        function initializePuzzle() {
+            selectedPuzzle = wordPool[Math.floor(Math.random() * wordPool.length)];
+            const container = document.getElementById("jumble-container");
+            if (container) {
+                container.innerText = selectedPuzzle.scrambled;
+            }
+        }
+
         function checkPuzzleAnswer() {
             const userGuess = document.getElementById("puzzle-input").value.trim().toUpperCase();
             const feedbackBox = document.getElementById("puzzle-feedback");
             
-            if(userGuess === selectedPuzzle.clean) {
+            if (userGuess === selectedPuzzle.clean) {
                 feedbackBox.style.color = "#00cc66";
                 feedbackBox.innerText = "✓ Correct! Editorial staff commends you.";
+                
+                // Load another one in 3 seconds
+                setTimeout(() => {
+                    initializePuzzle();
+                    document.getElementById("puzzle-input").value = "";
+                    feedbackBox.innerText = "";
+                }, 3000);
             } else {
                 feedbackBox.style.color = "#ff4444";
                 feedbackBox.innerText = "✗ Incorrect. Check spelling and retry.";
