@@ -26,7 +26,7 @@
             letter-spacing: 0.08em;
             font-weight: 700;
         }
-
+ 
         /* ==========================================================================
            FINANCIAL & WEATHER TICKERS
            ========================================================================== */
@@ -40,7 +40,7 @@
         .market-data span { margin-right: 15px; }
         .market-up { color: #00cc66; }
         .market-down { color: #ff4444; }
-
+ 
         /* ==========================================================================
            MASTHEAD (MAIN LOGO ZONE)
            ========================================================================== */
@@ -59,7 +59,7 @@
             display: flex;
             justify-content: space-between;
         }
-
+ 
         /* ==========================================================================
            SPONSOR PLACEMENT
            ========================================================================== */
@@ -73,7 +73,7 @@
         .sponsor-banner p { font-size: 0.7rem; color: #777; margin-bottom: 4px; }
         .sponsor-banner a { color: #b8860b; font-weight: bold; text-decoration: none; font-size: 1.05rem; }
         .sponsor-banner a:hover { text-decoration: underline; }
-
+ 
         /* ==========================================================================
            3-COLUMN LAYOUT SYSTEM
            ========================================================================== */
@@ -87,7 +87,7 @@
         /* Column Dividers */
         .col-left { border-right: 1px solid #e2ded5; padding-right: 15px; }
         .col-right { border-left: 1px solid #e2ded5; padding-left: 15px; }
-
+ 
         /* Typography & Story Styles */
         .story-tag { color: #990000; display: block; margin-bottom: 6px; }
         .main-title { font-size: 2.5rem; line-height: 1.1; font-weight: 700; margin-bottom: 12px; }
@@ -99,11 +99,11 @@
         .author { color: #666; font-size: 0.8rem; margin-bottom: 12px; }
         
         .divider-line { border-bottom: 1px dashed #cfc9bc; margin: 20px 0; }
-
+ 
         /* Graphic Placeholders */
         .news-img-box {
             width: 100%;
-            height: 240px;
+            max-height: 240px;
             background-color: #eae6df;
             border: 1px solid #dcd7cd;
             margin-bottom: 15px;
@@ -112,8 +112,16 @@
             justify-content: center;
             color: #777;
             font-style: italic;
+            overflow: hidden;
         }
-
+        .news-img-box img {
+            width: 100%;
+            height: 100%;
+            max-height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+ 
         /* ==========================================================================
            INTERACTIVE PUZZLE FEATURES
            ========================================================================== */
@@ -152,7 +160,7 @@
         }
         .puzzle-box button:hover { background-color: #444; }
         #puzzle-feedback { margin-top: 10px; font-weight: bold; font-size: 0.9rem; text-align: center; }
-
+ 
         /* ==========================================================================
            RESPONSIVE MEDIA SYSTEM
            ========================================================================== */
@@ -168,7 +176,7 @@
     </style>
 </head>
 <body>
-
+ 
     <!-- Upper Financial Data Strip -->
     <div class="ticker-wrap ui-label">
         <div class="container">
@@ -182,7 +190,7 @@
             </div>
         </div>
     </div>
-
+ 
     <div class="container">
         
         <!-- Main Header -->
@@ -194,13 +202,13 @@
                 <span>Final Print Edition</span>
             </div>
         </header>
-
+ 
         <!-- Paid Sponsor Space -->
         <div class="sponsor-banner ui-label">
             <p>Sponsored Content</p>
             <a href="#" target="_blank">☕ Fuel Your Morning: Get 20% off at Roasted Bean Coffee Co. with code 'CHRONICLE'</a>
         </div>
-
+ 
         <!-- Front Page 3-Column Content Frame -->
         <main class="page-grid">
             
@@ -210,15 +218,15 @@
                 <h3 class="sub-title"><a href="#">City Council Standardizes 'Nap Hours' for Remote Workforces</a></h3>
                 <p class="snippet">In a sweeping 7-2 vote, local municipal agencies established a mandatory quiet framework between 2:00 PM and 3:00 PM, citing monumental productivity leaps...</p>
                 <p class="author ui-label">By Clara Vance</p>
-
+ 
                 <div class="divider-line"></div>
-
+ 
                 <span class="story-tag ui-label">Science Desk</span>
                 <h3 class="sub-title"><a href="#">Botanists Confirm Plants Grow Shorter When Subjected to Sarcasm</a></h3>
                 <p class="snippet">A three-year study reveals that common ferns exposed to witty critiques and snarky comments grew nearly 12% shorter than those given standard classic rock music backgrounds...</p>
                 <p class="author ui-label">By Dr. Julian Vance</p>
             </aside>
-
+ 
             <!-- COLUMN 2: PRIMARY LEAD STORIES -->
             <section class="col-main">
                 <span class="story-tag ui-label" style="font-size: 0.9rem; font-weight: bold;">Global Dynamic Alert</span>
@@ -227,13 +235,13 @@
                 <div class="news-img-box">
                     <img src="ancient_undersea_city.jpeg" alt="Deep sea layout scan" class="news-image">
                 </div>
-
+ 
                 <p class="snippet"><strong>PACIFIC TRENCH —</strong> Maritime research divisions shocks global geological frameworks early Monday afternoon following tactical ocean floor scans. Researchers mapped clear architectural layouts matching standard typing layouts spanning multiple square kilometers across deep shelf valleys...</p>
                 
                 <p class="snippet">"We pressed down on a localized geographic ridge structure, and an acoustic sound pattern vibrated cleanly back up to our ship deck," Chief Officer Echo Finwright noted during a satellite status briefing.</p>
                 <p class="author ui-label">By Senior Bureau Chief Arthur Pendelton</p>
             </section>
-
+ 
             <!-- COLUMN 3: PUZZLES & METROPOLITAN LIFESTYLE -->
             <aside class="col-right">
                 
@@ -250,17 +258,17 @@
                     
                     <div id="puzzle-feedback"></div>
                 </div>
-
+ 
                 <div class="divider-line"></div>
-
+ 
                 <span class="story-tag ui-label">Fashion Trends</span>
                 <h3 class="sub-title"><a href="#">Are Polka Dot Ties Making a Defensive Comeback?</a></h3>
                 <p class="snippet">Leading design houses throughout metropolitan corridors report surprising shifts in corporate neckwear metrics as traditional settings look backwards...</p>
             </aside>
-
+ 
         </main>
     </div>
-
+ 
     <!-- JavaScript logic handling the interactive puzzle mechanics -->
     <script>
         // Puzzle state setup
@@ -273,7 +281,7 @@
         // Pick a random jumble configuration on load
         const selectedPuzzle = wordPool[Math.floor(Math.random() * wordPool.length)];
         document.getElementById("jumble-container").innerText = selectedPuzzle.scrambled;
-
+ 
         function checkPuzzleAnswer() {
             const userGuess = document.getElementById("puzzle-input").value.trim().toUpperCase();
             const feedbackBox = document.getElementById("puzzle-feedback");
