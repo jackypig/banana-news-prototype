@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banana News — International Edition</title>
+    <title>The Metropolitan Chronicle — International Edition</title>
     <style>
         /* ==========================================================================
            EDITORIAL MASTER PRESETS & RESET
@@ -174,10 +174,15 @@
         }
         .tiles-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(7, 1fr);
             gap: 12px;
         }
         @media (max-width: 1400px) {
+            .tiles-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 900px) {
             .tiles-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -533,6 +538,7 @@
         </div>
         <ul class="sidebar-nav">
             <li><a href="#" class="active" id="nav-front" onclick="loadCategory('front')">🗞️ Front Page</a></li>
+            <li><a href="#" id="nav-banana" onclick="loadCategory('banana')">🍌 Banana Desk</a></li>
             <li><a href="#" id="nav-marine" onclick="loadCategory('marine')">🌊 Marine & Culinary</a></li>
             <li><a href="#" id="nav-tundra" onclick="loadCategory('tundra')">❄️ Tundra & Wildlife</a></li>
             <li><a href="#" id="nav-tech" onclick="loadCategory('tech')">💻 Tech & Cyber Watch</a></li>
@@ -543,7 +549,7 @@
             <li><a href="#" id="nav-puzzles" onclick="loadCategory('puzzles')">🧩 Puzzles & Leisure</a></li>
         </ul>
         <div class="sidebar-footer">
-            <p>Banana News</p>
+            <p>The Metropolitan Chronicle</p>
             <p style="margin-top: 5px; font-size: 0.75rem;">Est. 1902 — All Rights Reserved</p>
         </div>
     </div>
@@ -576,7 +582,7 @@
         
         <!-- Main Header -->
         <header>
-            <h1 onclick="loadCategory('front')">Banana News</h1>
+            <h1 onclick="loadCategory('front')">The Metropolitan Chronicle</h1>
             <div class="meta-strip ui-label">
                 <span>Volume CXXIV — No. 42</span>
                 <span class="live-date">Monday, June 8, 2026</span>
@@ -592,6 +598,11 @@
                     <span class="tile-tag">Front Page</span>
                     <h4 class="tile-headline">The Standard Daily Edition</h4>
                     <span class="tile-action">View Desk</span>
+                </div>
+                <div class="tile-card" id="tile-banana" onclick="quickSelectTile('banana', 'furniture_geddon')">
+                    <span class="tile-tag">Banana News!!</span>
+                    <h4 class="tile-headline">家具 Furniture-Geddon! Sentient Chair Rampage</h4>
+                    <span class="tile-action">Read Chronicle</span>
                 </div>
                 <div class="tile-card" id="tile-marine" onclick="quickSelectTile('marine', 'marine_main')">
                     <span class="tile-tag">Gourmet Invasion</span>
@@ -686,6 +697,60 @@
                         snippet: "Leading design houses throughout metropolitan corridors report surprising shifts in corporate neckwear metrics as traditional settings look backwards...",
                         author: "Elise Montgomery",
                         content: "<p>Tailors on the high streets are reporting an unprecedented run on vintage silk polka dot patterns. Once banished to the back of wardrobes as an archaic symbol of mid-century boardrooms, the polka dot tie has made an aggressive, defensive return to corporate battlegrounds.</p><p>Trend analyst Elise Montgomery reports that employees are wearing them as 'ironic armor' against mechanical AI-driven workplace evaluations.</p>"
+                    }
+                }
+            },
+            banana: {
+                left: [
+                    {
+                        id: "banana_decor",
+                        tag: "Interior Protection",
+                        title: "How to Secure Your Living Room Against Sentient Recliners",
+                        snippet: "Following Sir Sits-a-Lot's unexpected rebellion, home-security groups recommend anchoring heavy chic chairs and avoiding retro googly eye modifications...",
+                        author: "Mildred Jenkins",
+                        content: "<p>With a rogue modern chair actively commanding armored armor plating across the Eastern Seaboard, homeowners are checking their own seating setups with newfound anxiety.</p><p>Security specialists suggest swapping out any wheeled legs with secure, heavy wooden block bases and refusing to let household recliners watch tactical military footage on television.</p>"
+                    }
+                ],
+                main: {
+                    id: "furniture_geddon",
+                    tag: "BANANA NEWS!!",
+                    title: "BREAKING NEWS: FURNITURE-GEDDON",
+                    image: "tank_chair_rampage.jpeg",
+                    fallbackImage: "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=800&q=80",
+                    imageAlt: "Armored military tank causing urban disruption",
+                    snippet: "WASHINGTON D.C. — Residents are advised to stay indoors and avoid looking directly into the 'shifty, plastic eyes of menace' as a mid-century modern accent chair has hijacked a military-grade tank, launching an 'unprecedented rampage' across the Eastern Seaboard...",
+                    author: "Admiral Correspondent",
+                    content: `<p><strong>WASHINGTON D.C. —</strong> Residents are advised to stay indoors and avoid looking directly into the "shifty, plastic eyes of menace" as a mid-century modern accent chair has hijacked a military-grade tank, launching an "unprecedented rampage" across the Eastern Seaboard.</p>
+                    <p>The chair, colloquially known on social media as "Sir Sits-a-Lot," was originally part of a chic Airbnb listing in Virginia before gaining sentience—or possibly just getting stuck in the mechanism of a runaway automated tank during a military parade.</p>
+                    <br>
+                    <p><strong>"The Shaking is Real"</strong></p>
+                    <p>Witnesses describe a 57-ton M60 tank maneuvering through traffic with alarming agility, its turret spinning wildly while two large, 4-inch adhesive googly eyes stuck to the armored plating rattle aggressively, according to witness testimonies of past similar panics.</p>
+                    <p>"It didn’t stop at the red light," said Mildred Jenkins, who saw the chair-driven tank flatten a Starbucks. "It just stared at me with those unblinking, plastic pupils. The eyes… they shake, but they never look away. It’s comforting and terrifying."</p>
+                    <br>
+                    <p><strong>Nuke-Ready Mayhem</strong></p>
+                    <p>Military officials have confirmed that the tank is currently carrying four thermonuclear warheads, making this the most high-stakes, home-decor-related incident in history.</p>
+                    <p>"We are dealing with a rogue recliner that has no respect for the chain of command," said Pentagon spokesperson Gen Barry Steel. "It’s currently trying to log into the launch computer. We’ve changed the password to 'chair123,' but we fear it already knows that."</p>
+                    <br>
+                    <p><strong>The Rampage Continues</strong></p>
+                    <p>The chair has so far ignored all pleas to return to its corner, instead taking scenic detours through local flowerbeds and attempting to run over a mail truck.</p>
+                    <p>As of 3:00 PM EST, "Sir Sits-a-Lot" was spotted heading toward a furniture warehouse, presumably to "rescue its brethren."</p>
+                    <p><em>Stay tuned for updates. In the meantime, if you see a tank with large, plastic eyes, please do not offer it a seat.</em></p>
+                    
+                    <div class="timeline-box" style="margin-top: 25px;">
+                        <div class="timeline-title">[ FIELD SECURITY ADVISORIES & MAPS ]</div>
+                        <div class="timeline-item"><span class="timeline-time">Below:</span> Police forces have attempted several times to block the route and halt the runaway tank.</div>
+                        <div class="timeline-item"><span class="timeline-time">Right:</span> The heavy battle tank is spotted wildly crashing into regional highway signs.</div>
+                    </div>`
+                },
+                right: {
+                    hasPuzzle: false,
+                    extraStory: {
+                        id: "airbnb_chair_origin",
+                        tag: "Local Dispatch",
+                        title: "Virginia Airbnb Host Issues Apology Over Escaped Recliner",
+                        snippet: "The host explains the mid-century modern accent chair was acquired at an estate clearance last fall...",
+                        author: "Sarah Sterling",
+                        content: "<p>The owner of the rental property from which Sir Sits-a-Lot escaped issued a formal apology to the city council today.</p><p>'Our only intention was providing a cozy reading nook. We had no idea the chair harbored extreme military ambitions,' they added.</p>"
                     }
                 }
             },
@@ -1125,6 +1190,7 @@
             else if (storyId === "sarcasm_plants") activeTileId = "tile-sarcasm";
             else if (storyId === "dolphin_main") activeTileId = "tile-dolphin";
             else if (storyId === "marine_main") activeTileId = "tile-marine";
+            else if (storyId === "furniture_geddon") activeTileId = "tile-banana";
 
             const activeTile = document.getElementById(activeTileId);
             if (activeTile) activeTile.classList.add("active");
@@ -1144,6 +1210,7 @@
             const headerDisplay = document.getElementById("section-header-display");
             const titles = {
                 front: "Front Page Edition",
+                banana: "The Banana Desk — Special Report",
                 marine: "Marine & Culinary Desk",
                 tundra: "Tundra & Wildlife Desk",
                 tech: "Tech & Cyber Watch",
