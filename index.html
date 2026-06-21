@@ -537,16 +537,7 @@
             <button class="close-btn" onclick="toggleSidebar(false)">&times;</button>
         </div>
         <ul class="sidebar-nav">
-            <li><a href="#" class="active" id="nav-front" onclick="loadCategory('front')">🗞️ Front Page</a></li>
-            <li><a href="#" id="nav-banana" onclick="loadCategory('banana')">🍌 Banana Desk</a></li>
-            <li><a href="#" id="nav-marine" onclick="loadCategory('marine')">🌊 Marine & Culinary</a></li>
-            <li><a href="#" id="nav-tundra" onclick="loadCategory('tundra')">❄️ Tundra & Wildlife</a></li>
-            <li><a href="#" id="nav-tech" onclick="loadCategory('tech')">💻 Tech & Cyber Watch</a></li>
-            <li><a href="#" id="nav-world" onclick="loadCategory('world')">🌎 World & Global Affairs</a></li>
-            <li><a href="#" id="nav-local" onclick="loadCategory('local')">🏘️ Local Economy</a></li>
-            <li><a href="#" id="nav-science" onclick="loadCategory('science')">🔬 Science Desk</a></li>
-            <li><a href="#" id="nav-fashion" onclick="loadCategory('fashion')">🧥 Fashion & Lifestyle</a></li>
-            <li><a href="#" id="nav-puzzles" onclick="loadCategory('puzzles')">🧩 Puzzles & Leisure</a></li>
+            <!-- Menu items will be rendered here by menus/menu-renderer.js -->
         </ul>
         <div class="sidebar-footer">
             <p>The Metropolitan Chronicle</p>
@@ -594,41 +585,7 @@
         <div class="tiles-banner-wrapper">
             <div class="tiles-banner-title ui-label">Hot Coverage & Quick Reader Desk</div>
             <div class="tiles-grid">
-                <div class="tile-card active" id="tile-front" onclick="quickSelectTile('front', 'front')">
-                    <span class="tile-tag">Front Page</span>
-                    <h4 class="tile-headline">The Standard Daily Edition</h4>
-                    <span class="tile-action">View Desk</span>
-                </div>
-                <div class="tile-card" id="tile-banana" onclick="quickSelectTile('banana', 'furniture_geddon')">
-                    <span class="tile-tag">Banana News!!</span>
-                    <h4 class="tile-headline">家具 Furniture-Geddon! Sentient Chair Rampage</h4>
-                    <span class="tile-action">Read Chronicle</span>
-                </div>
-                <div class="tile-card" id="tile-marine" onclick="quickSelectTile('marine', 'marine_main')">
-                    <span class="tile-tag">Gourmet Invasion</span>
-                    <h4 class="tile-headline">Deep-Sea Invaders Turned Gourmet Sensation</h4>
-                    <span class="tile-action">Read Chronicle</span>
-                </div>
-                <div class="tile-card" id="tile-dolphin" onclick="quickSelectTile('tech', 'dolphin_main')">
-                    <span class="tile-tag">Digital Troll</span>
-                    <h4 class="tile-headline">Audio Drivers Went "Dolphin" Worldwide</h4>
-                    <span class="tile-action">Read Chronicle</span>
-                </div>
-                <div class="tile-card" id="tile-polar" onclick="quickSelectTile('tundra', 'tundra_polar')">
-                    <span class="tile-tag">Tundra Clash</span>
-                    <h4 class="tile-headline">Loose Dog Survives Polar Bear Face-Off</h4>
-                    <span class="tile-action">Read Chronicle</span>
-                </div>
-                <div class="tile-card" id="tile-keyboard" onclick="quickSelectTile('front', 'keyboard_main')">
-                    <span class="tile-tag">Deep Sea Discovery</span>
-                    <h4 class="tile-headline">Ancient Keyboard Civilization Undersea</h4>
-                    <span class="tile-action">Read Chronicle</span>
-                </div>
-                <div class="tile-card" id="tile-sarcasm" onclick="quickSelectTile('front', 'sarcasm_plants')">
-                    <span class="tile-tag">Science Study</span>
-                    <h4 class="tile-headline">Plants Grow Shorter Under Sarcasm</h4>
-                    <span class="tile-action">Read Chronicle</span>
-                </div>
+                <!-- Tile cards will be rendered here by tiles/tiles-renderer.js -->
             </div>
         </div>
 
@@ -654,6 +611,12 @@
         </div>
     </div>
 
+    <!-- Import modularized components -->
+    <script src="menus/menu-items.js"></script>
+    <script src="menus/menu-renderer.js"></script>
+    <script src="tiles/tiles-data.js"></script>
+    <script src="tiles/tiles-renderer.js"></script>
+
     <!-- JavaScript logic handling the interactive news desk system & puzzle -->
     <script>
         // Article Database for Category Navigation
@@ -666,15 +629,15 @@
                         title: "City Council Standardizes 'Nap Hours' for Remote Workforces",
                         snippet: "In a sweeping 7-2 vote, local municipal agencies established a mandatory quiet framework between 2:00 PM and 3:00 PM, citing monumental productivity leaps...",
                         author: "Clara Vance",
-                        content: "<p>In a historic and sweeping 7-2 vote early this morning, the Metropolitan City Council voted to formally recognize and enforce 'Nap Hours' for remote corporate employees. The newly established mandate creates a system-wide quiet period between the hours of 2:00 PM and 3:00 PM daily.</p><p>Regional administrators cited data from a pilot study showing a monumental 34% increase in late-afternoon efficiency when employees were actively encouraged to disconnect and rest. Critics, however, warn of potential logistical gridlocks in real-time customer support sectors.</p>"
+                        content: "<p>In a historic and sweeping 7-2 vote early this morning, the Metropolitan City Council voted to formally recognize and enforce 'Nap Hours' for remote corporate[...]"
                     },
                     {
                         id: "sarcasm_plants",
                         tag: "Science Desk",
                         title: "Botanists Confirm Plants Grow Shorter When Subjected to Sarcasm",
-                        snippet: "A three-year study reveals that common ferns exposed to witty critiques and snarky comments grew nearly 12% shorter than those given standard classic rock music backgrounds...",
+                        snippet: "A three-year study reveals that common ferns exposed to witty critiques and snarky comments grew nearly 12% shorter than those given standard classic rock music [...]",
                         author: "Dr. Julian Vance",
-                        content: "<p>A bizarre three-year research paper released by the Botanical Research Institute of Maryland has proven that vegetation responds poorly to negative humor.</p><p>In controlled environments, common house ferns exposed to sarcastic monologues grew 12% slower and shorter than ferns exposed to positive classical music or neutral podcasts. 'They seem to sense the lack of genuine warmth in the delivery,' noted Dr. Julian Vance. Future trials will study whether tomatoes have an active resilience to dry British humor.</p>"
+                        content: "<p>A bizarre three-year research paper released by the Botanical Research Institute of Maryland has proven that vegetation responds poorly to negative humor.</p>[...]"
                     }
                 ],
                 main: {
@@ -684,9 +647,9 @@
                     image: "ancient_undersea_city.jpeg",
                     fallbackImage: "https://images.unsplash.com/photo-1546074177-ffedd1d85d4b?auto=format&fit=crop&w=800&q=80",
                     imageAlt: "Deep sea layout scan representing mysterious key structures",
-                    snippet: "MARITIME RESEARCH DIVISIONS shock global geological frameworks following tactical ocean floor scans. Researchers mapped clear architectural layouts matching standard typing layouts spanning multiple square kilometers across deep shelf valleys...",
+                    snippet: "MARITIME RESEARCH DIVISIONS shock global geological frameworks following tactical ocean floor scans. Researchers mapped clear architectural layouts matching standard[...]",
                     author: "Senior Bureau Chief Arthur Pendelton",
-                    content: "<p>MARITIME RESEARCH DIVISIONS have shocked global geological networks early Monday afternoon following tactical ocean floor scans near the Pacific Trench. Remote probes mapped clean architectural layouts matching standard keyboard profiles. Researchers recorded massive key-like basalt structures aligned in perfect QWERTY formation, stretching across multiple square kilometers of a deep shelf valley.</p><p>'We pressed down on a localized geographic ridge resembling a massive spacebar, and an acoustic sound pattern vibrated cleanly back up to our ship deck,' Chief Officer Echo Finwright noted during an emergency satellite briefing. Scientists have ruled out volcanic formations, hinting at an ancient society deeply obsessed with communication technology.</p>"
+                    content: "<p>MARITIME RESEARCH DIVISIONS have shocked global geological networks early Monday afternoon following tactical ocean floor scans near the Pacific Trench. Remote pr[...]"
                 },
                 right: {
                     hasPuzzle: true,
@@ -696,7 +659,7 @@
                         title: "Are Polka Dot Ties Making a Defensive Comeback?",
                         snippet: "Leading design houses throughout metropolitan corridors report surprising shifts in corporate neckwear metrics as traditional settings look backwards...",
                         author: "Elise Montgomery",
-                        content: "<p>Tailors on the high streets are reporting an unprecedented run on vintage silk polka dot patterns. Once banished to the back of wardrobes as an archaic symbol of mid-century boardrooms, the polka dot tie has made an aggressive, defensive return to corporate battlegrounds.</p><p>Trend analyst Elise Montgomery reports that employees are wearing them as 'ironic armor' against mechanical AI-driven workplace evaluations.</p>"
+                        content: "<p>Tailors on the high streets are reporting an unprecedented run on vintage silk polka dot patterns. Once banished to the back of wardrobes as an archaic symbol[...]"
                     }
                 }
             },
@@ -708,7 +671,7 @@
                         title: "How to Secure Your Living Room Against Sentient Recliners",
                         snippet: "Following Sir Sits-a-Lot's unexpected rebellion, home-security groups recommend anchoring heavy chic chairs and avoiding retro googly eye modifications...",
                         author: "Mildred Jenkins",
-                        content: "<p>With a rogue modern chair actively commanding armored armor plating across the Eastern Seaboard, homeowners are checking their own seating setups with newfound anxiety.</p><p>Security specialists suggest swapping out any wheeled legs with secure, heavy wooden block bases and refusing to let household recliners watch tactical military footage on television.</p>"
+                        content: "<p>With a rogue modern chair actively commanding armored armor plating across the Eastern Seaboard, homeowners are checking their own seating setups with newfoun[...]"
                     }
                 ],
                 main: {
@@ -718,29 +681,9 @@
                     image: "tank_chair_rampage.jpeg",
                     fallbackImage: "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=800&q=80",
                     imageAlt: "Armored military tank causing urban disruption",
-                    snippet: "WASHINGTON D.C. — Residents are advised to stay indoors and avoid looking directly into the 'shifty, plastic eyes of menace' as a mid-century modern accent chair has hijacked a military-grade tank, launching an 'unprecedented rampage' across the Eastern Seaboard...",
+                    snippet: "WASHINGTON D.C. — Residents are advised to stay indoors and avoid looking directly into the 'shifty, plastic eyes of menace' as a mid-century modern accent chair h[...]",
                     author: "Admiral Correspondent",
-                    content: `<p><strong>WASHINGTON D.C. —</strong> Residents are advised to stay indoors and avoid looking directly into the "shifty, plastic eyes of menace" as a mid-century modern accent chair has hijacked a military-grade tank, launching an "unprecedented rampage" across the Eastern Seaboard.</p>
-                    <p>The chair, colloquially known on social media as "Sir Sits-a-Lot," was originally part of a chic Airbnb listing in Virginia before gaining sentience—or possibly just getting stuck in the mechanism of a runaway automated tank during a military parade.</p>
-                    <br>
-                    <p><strong>"The Shaking is Real"</strong></p>
-                    <p>Witnesses describe a 57-ton M60 tank maneuvering through traffic with alarming agility, its turret spinning wildly while two large, 4-inch adhesive googly eyes stuck to the armored plating rattle aggressively, according to witness testimonies of past similar panics.</p>
-                    <p>"It didn’t stop at the red light," said Mildred Jenkins, who saw the chair-driven tank flatten a Starbucks. "It just stared at me with those unblinking, plastic pupils. The eyes… they shake, but they never look away. It’s comforting and terrifying."</p>
-                    <br>
-                    <p><strong>Nuke-Ready Mayhem</strong></p>
-                    <p>Military officials have confirmed that the tank is currently carrying four thermonuclear warheads, making this the most high-stakes, home-decor-related incident in history.</p>
-                    <p>"We are dealing with a rogue recliner that has no respect for the chain of command," said Pentagon spokesperson Gen Barry Steel. "It’s currently trying to log into the launch computer. We’ve changed the password to 'chair123,' but we fear it already knows that."</p>
-                    <br>
-                    <p><strong>The Rampage Continues</strong></p>
-                    <p>The chair has so far ignored all pleas to return to its corner, instead taking scenic detours through local flowerbeds and attempting to run over a mail truck.</p>
-                    <p>As of 3:00 PM EST, "Sir Sits-a-Lot" was spotted heading toward a furniture warehouse, presumably to "rescue its brethren."</p>
-                    <p><em>Stay tuned for updates. In the meantime, if you see a tank with large, plastic eyes, please do not offer it a seat.</em></p>
-                    
-                    <div class="timeline-box" style="margin-top: 25px;">
-                        <div class="timeline-title">[ FIELD SECURITY ADVISORIES & MAPS ]</div>
-                        <div class="timeline-item"><span class="timeline-time">Below:</span> Police forces have attempted several times to block the route and halt the runaway tank.</div>
-                        <div class="timeline-item"><span class="timeline-time">Right:</span> The heavy battle tank is spotted wildly crashing into regional highway signs.</div>
-                    </div>`
+                    content: `<p><strong>WASHINGTON D.C. —</strong> Residents are advised to stay indoors and avoid looking directly into the "shifty, plastic eyes of menace" as a mid-century m[...]<p>The chair, colloquially known on social media as "Sir Sits-a-Lot," was originally part of a chic Airbnb listing in Virginia before gaining sentience—or possibly just gett[...]<br><p><strong>"The Shaking is Real"</strong></p><p>Witnesses describe a 57-ton M60 tank maneuvering through traffic with alarming agility, its turret spinning wildly while two large, 4-inch adhesive googly eyes stuck to the[...]<p>"It didn't stop at the red light," said Mildred Jenkins, who saw the chair-driven tank flatten a Starbucks. "It just stared at me with those unblinking, plastic pupils. T[...]<br><p><strong>Nuke-Ready Mayhem</strong></p><p>Military officials have confirmed that the tank is currently carrying four thermonuclear warheads, making this the most high-stakes, home-decor-related incident in history.[...]<p>"We are dealing with a rogue recliner that has no respect for the chain of command," said Pentagon spokesperson Gen Barry Steel. "It's currently trying to log into the la[...]<br><p><strong>The Rampage Continues</strong></p><p>The chair has so far ignored all pleas to return to its corner, instead taking scenic detours through local flowerbeds and attempting to run over a mail truck.</p><p>As of 3:00 PM EST, "Sir Sits-a-Lot" was spotted heading toward a furniture warehouse, presumably to "rescue its brethren."</p><p><em>Stay tuned for updates. In the meantime, if you see a tank with large, plastic eyes, please do not offer it a seat.</em></p><div class="timeline-box" style="margin-top: 25px;"><div class="timeline-title">[ FIELD SECURITY ADVISORIES & MAPS ]</div><div class="timeline-item"><span class="timeline-time">Below:</span> Police forces have attempted several times to block the route and halt the runaway tank.</div><div class="timeline-item"><span class="timeline-time">Right:</span> The heavy battle tank is spotted wildly crashing into regional highway signs.</div></div>`
                 },
                 right: {
                     hasPuzzle: false,
@@ -750,7 +693,7 @@
                         title: "Virginia Airbnb Host Issues Apology Over Escaped Recliner",
                         snippet: "The host explains the mid-century modern accent chair was acquired at an estate clearance last fall...",
                         author: "Sarah Sterling",
-                        content: "<p>The owner of the rental property from which Sir Sits-a-Lot escaped issued a formal apology to the city council today.</p><p>'Our only intention was providing a cozy reading nook. We had no idea the chair harbored extreme military ambitions,' they added.</p>"
+                        content: "<p>The owner of the rental property from which Sir Sits-a-Lot escaped issued a formal apology to the city council today.</p><p>'Our only intention was providing [...]"
                     }
                 }
             },
@@ -762,7 +705,7 @@
                         title: "Bycatch Protections Under Review Following Pacific Frenzy",
                         snippet: "With millions of non-native fish hauled daily, ocean conservation groups are drafting guidelines to secure indigenous coldwater crab colonies...",
                         author: "Dr. Elena Vance",
-                        content: "<p>As commercial and amateur fleets drag heavy nets through the shallow coastal passages around Anchorage, conservation coalitions have issued an advisory on sensitive bottom-dwelling crab families.</p><p>While the emergency harvest has successfully reduced predator numbers, regulators are urging crews to use selective hooks to protect vulnerable King and Dungeness crab ecosystems.</p>"
+                        content: "<p>As commercial and amateur fleets drag heavy nets through the shallow coastal passages around Anchorage, conservation coalitions have issued an advisory on sen[...]"
                     }
                 ],
                 main: {
@@ -772,56 +715,9 @@
                     image: "seafood_feast.jpeg",
                     fallbackImage: "https://images.unsplash.com/photo-1534080391025-a87b4f1402e6?auto=format&fit=crop&w=800&q=80",
                     imageAlt: "A rich steaming seafood stew bouillabaisse",
-                    snippet: "ANCHORAGE, AK — Scientists call it an unprecedented ecological anomaly. Local chefs call it dinner. An extraordinary dual-species invasion has swarmed the coastlines of the Northern Pacific, baffling biologists...",
+                    snippet: "ANCHORAGE, AK — Scientists call it an unprecedented ecological anomaly. Local chefs call it dinner. An extraordinary dual-species invasion has swarmed the coastlin[...]",
                     author: "Admiral Correspondent Arthur Finch",
-                    content: `<p><strong>ANCHORAGE, AK —</strong> Scientists call it an unprecedented ecological anomaly. Local chefs call it dinner.</p>
-                    <p>An extraordinary, dual-species "invasion" of Atlantic Cod and King Salmon has swarmed the coastlines of the Northern Pacific, baffling marine biologists and triggering an unprecedented, 24-hour fishing frenzy. But while conservationists initially feared an environmental disaster, coastal communities have found a deliciously direct way to handle the crisis: they are eating their way through it.</p>
-                    <br>
-                    <p><strong>The Convergence of Two Oceans</strong></p>
-                    <p>The phenomenon began three weeks ago when commercial vessels reported massive, dense walls of fish moving inward toward shallow bays. What made the schools unique was their composition. Millions of massive Atlantic Cod—miles out of their native territory—were migrating alongside bursting populations of King Salmon.</p>
-                    <p>"We've never seen anything like it," says Dr. Elena Vance, a marine ecologist at the North Pacific Research Institute. "Climate shifts and anomalies in deep-sea currents have essentially created a 'highway' that funneled these two massive populations into the same coastal zones. It’s an aggressive influx of apex predators."</p>
-                    <p>Initial fears focused on the local ecosystem. How could smaller baitfish survive such a massive onslaught of hungry invaders?</p>
-                    <p>The answer, it turned out, came from the local culinary industry.</p>
-                    <br>
-                    <p><strong>"If You Can't Beat 'Em, Fry 'Em"</strong></p>
-                    <p>Governments quickly lifted catch limits, issuing an emergency "open harvest" to reduce the fish populations before they could destabilize the local habitat. The result has been a seafood boom unlike anything seen in the modern era.</p>
-                    <p>Price per pound for premium fish has plummeted, turning gourmet ingredients into everyday staple meals. Across coastal towns, restaurants have completely overhauled their menus to keep up with the supply.</p>
-                    
-                    <table class="editorial-table">
-                        <thead>
-                            <tr>
-                                <th>Dish</th>
-                                <th>Description</th>
-                                <th>Popularity Rating</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>The "Invasion" Fish & Chips</strong></td>
-                                <td>Massive flakes of Atlantic cod beer-battered in local stout, served with tartar sauce.</td>
-                                <td>⭐⭐⭐⭐⭐</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Citrus-Glazed King Platters</strong></td>
-                                <td>Thick-cut salmon steaks grilled over cedar planks with a wild berry reduction.</td>
-                                <td>⭐⭐⭐⭐</td>
-                            </tr>
-                            <tr>
-                                <td><strong>The Ecocide Stew</strong></td>
-                                <td>A rich, tomato-based bouillabaisse combining both cod and salmon in a single bowl.</td>
-                                <td>⭐⭐⭐⭐⭐</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <p><strong>A Community United by the Fork</strong></p>
-                    <p>At The Rusty Anchor, a popular harbor-side eatery, lines have been wrapping around the block for days.</p>
-                    <p>"Usually, we treat King Salmon like gold because it’s so expensive to source," says head chef Marcus Diaz, while deftly searing a row of pink salmon fillets. "Now? We’re throwing it in tacos, making salmon burgers for school lunches, and pairing it with the cod for the ultimate seafood platters. The customers are thrilled, and we're doing our civic duty by clearing out the bays."</p>
-                    <p>Fishermen are working around the clock, with harbors transformed into bustling open-air fish markets. Neighbors are exchanging recipes over fences, and backyard smokers are running 24/7, filling the air with the rich aroma of maple-cured fish.</p>
-                    <br>
-                    <p><strong>Looking Ahead</strong></p>
-                    <p>While biologists warn that this seafood surplus is a temporary band-aid to a larger symptom of changing ocean temperatures, for now, the strategy is working. The massive push from both commercial fleets and hungry citizens has successfully thinned the invasive schools, keeping the local marine balance from collapsing.</p>
-                    <p>The message from the coast is clear: if nature sends an army of delicious fish to your doorstep, you don't build a wall—you fire up the grill.</p>`
+                    content: `<p><strong>ANCHORAGE, AK —</strong> Scientists call it an unprecedented ecological anomaly. Local chefs call it dinner.</p><p>An extraordinary, dual-species "invasion" of Atlantic Cod and King Salmon has swarmed the coastlines of the Northern Pacific, baffling marine biologists and triggering an u[...]<br><p><strong>The Convergence of Two Oceans</strong></p><p>The phenomenon began three weeks ago when commercial vessels reported massive, dense walls of fish moving inward toward shallow bays. What made the schools unique was their[...]<p>"We've never seen anything like it," says Dr. Elena Vance, a marine ecologist at the North Pacific Research Institute. "Climate shifts and anomalies in deep-sea currents ha[...]<p>Initial fears focused on the local ecosystem. How could smaller baitfish survive such a massive onslaught of hungry invaders?</p><p>The answer, it turned out, came from the local culinary industry.</p><br><p><strong>"If You Can't Beat 'Em, Fry 'Em"</strong></p><p>Governments quickly lifted catch limits, issuing an emergency "open harvest" to reduce the fish populations before they could destabilize the local habitat. The result has [...]<p>Price per pound for premium fish has plummeted, turning gourmet ingredients into everyday staple meals. Across coastal towns, restaurants have completely overhauled their m[...]<table class="editorial-table"><thead><tr><th>Dish</th><th>Description</th><th>Popularity Rating</th></tr></thead><tbody><tr><td><strong>The "Invasion" Fish & Chips</strong></td><td>Massive flakes of Atlantic cod beer-battered in local stout, served with tartar sauce.</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><strong>Citrus-Glazed King Platters</strong></td><td>Thick-cut salmon steaks grilled over cedar planks with a wild berry reduction.</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>The Ecocide Stew</strong></td><td>A rich, tomato-based bouillabaisse combining both cod and salmon in a single bowl.</td><td>⭐⭐⭐⭐⭐</td></tr></tbody></table><p><strong>A Community United by the Fork</strong></p><p>At The Rusty Anchor, a popular harbor-side eatery, lines have been wrapping around the block for days.</p><p>"Usually, we treat King Salmon like gold because it's so expensive to source," says head chef Marcus Diaz, while deftly searing a row of pink salmon fillets. "Now? We'r[...]<p>Fishermen are working around the clock, with harbors transformed into bustling open-air fish markets. Neighbors are exchanging recipes over fences, and backyard smokers are[...]<br><p><strong>Looking Ahead</strong></p><p>While biologists warn that this seafood surplus is a temporary band-aid to a larger symptom of changing ocean temperatures, for now, the strategy is working. The massive pu[...]<p>The message from the coast is clear: if nature sends an army of delicious fish to your doorstep, you don't build a wall—you fire up the grill.</p>`
                 },
                 right: {
                     hasPuzzle: false,
@@ -831,7 +727,7 @@
                         title: "Warm Currents Open Arctic Passages for East-to-West Migrations",
                         snippet: "Thermal imaging reports map massive, unprecedented deep thermal pathways bypassing traditional sub-zero marine blocks...",
                         author: "Dr. Elena Vance",
-                        content: "<p>Unusual thermocline layers have temporarily decoupled the intense freezing boundaries of Arctic marine gates.</p><p>This allows energetic schools of Atlantic cod to transit safely westward, mingling directly with northern Pacific wild salmon groups in a historical first.</p>"
+                        content: "<p>Unusual thermocline layers have temporarily decoupled the intense freezing boundaries of Arctic marine gates.</p><p>This allows energetic schools of Atlantic [...]"
                     }
                 }
             },
@@ -843,7 +739,7 @@
                         title: "Security Experts Suggest Total Audio Hardware Isolation",
                         snippet: "Following the wild dolphin-drop occurrences, security firms are advocating for hard physical switches to prevent drivers from forcing maximum volumes...",
                         author: "Linus Patterson",
-                        content: "<p>In the wake of the 'Fin-Ware' phenomenon, hardware engineers and digital privacy experts are urging computer designers to implement physical, tactile audio connection breakers.</p><p>Currently, software-based audio drivers can easily override system parameters and set physical lines to full volume. A hard-wired analog interrupt switch would give final, physical priority control back to desktop users.</p>"
+                        content: "<p>In the wake of the 'Fin-Ware' phenomenon, hardware engineers and digital privacy experts are urging computer designers to implement physical, tactile audio co[...]"
                     }
                 ],
                 main: {
@@ -853,59 +749,9 @@
                     image: "dolphin_driver_hack.jpeg",
                     fallbackImage: "https://images.unsplash.com/photo-1570481662006-a3a1374699e8?auto=format&fit=crop&w=800&q=80",
                     imageAlt: "A bottlenose dolphin looking playful",
-                    snippet: "SILICON VALLEY — If you happened to hear a sudden, deafening, high-pitched “EEEE-EEEE-EEEE!” echoing from your coworker’s cubicle today, don't worry: they aren't secretly harboring a marine mammal. They are just the latest victim of 'Fin-Ware'...",
+                    snippet: "SILICON VALLEY — If you happened to hear a sudden, deafening, high-pitched "EEEE-EEEE-EEEE!" echoing from your coworker's cubicle today, don't worry: they ar[...]",
                     author: "Senior Tech Correspondent Raymond Vance",
-                    content: `<p><strong>SILICON VALLEY —</strong> If you happened to hear a sudden, deafening, high-pitched “EEEE-EEEE-EEEE!” echoing from your coworker’s cubicle today, don't worry: they aren't secretly harboring a marine mammal. They are just the latest victim of "Fin-Ware," a mysterious and hilarious global phenomenon that has effectively turned the world's computers into digital trolls.</p>
-                    <p>Over the last 48 hours, millions of desktop and laptop users across every major operating system have reported an identical, baffling issue: their computers are randomly blasting dolphin sound effects at absolute maximum volume.</p>
-                    <br>
-                    <p><strong>Anatomy of a High-Volume Prank</strong></p>
-                    <p>The phenomenon doesn't seem to care what you are doing. Victims report the audio triggers during crucial Zoom meetings, late-night study sessions, and quiet library visits.</p>
-                    <p>According to reports, the glitch follows a specific, agonizing pattern:</p>
-                    <p>1. The user’s system volume automatically forces itself to 100%.<br>
-                    2. All audio outputs (including connected headphones) are bypassed, routing the sound directly to the internal speakers.<br>
-                    3. A crisp, studio-quality recording of a bottlenose dolphin plays for exactly 4 seconds.<br>
-                    4. The system volume returns to normal, leaving the user stunned and thoroughly embarrassed.</p>
-                    <p>"I was in the middle of pitching a seven-figure deal to our board of directors," said Marcus Vance, a chief financial officer based in Chicago. "Suddenly, my laptop just screamed at me like an angry Flipper. I tried to slam the laptop shut, but it just kept squeaking from the hinges. The board thought I was having a breakdown."</p>
-                    
-                    <br>
-                    <p><strong>Tech Giants Baffled, Subreddits Explode</strong></p>
-                    <p>Cybersecurity firms were initially quick to sound the alarm on what they assumed was a highly sophisticated, coordinated malware attack. However, deeper inspection has left experts scratching their heads. The code behind the "dolphin drop" doesn't steal data, encrypt files, or demand Bitcoin. It just... trolls.</p>
-                    <p>An analysis of the affected systems shows a massive influx of user complaints across Reddit and tech support forums:</p>
-                    
-                    <table class="editorial-table">
-                        <thead>
-                            <tr>
-                                <th>Platform</th>
-                                <th>Estimated Affected Users</th>
-                                <th>Top Reported Sympathy</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Windows 11</strong></td>
-                                <td>4.2 Million</td>
-                                <td>"Happened during a funeral stream."</td>
-                            </tr>
-                            <tr>
-                                <td><strong>macOS</strong></td>
-                                <td>2.8 Million</td>
-                                <td>"My cat hasn't come out from under the bed."</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Linux</strong></td>
-                                <td>500,000</td>
-                                <td>"Even my terminal is mocking me."</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <p>Leading OS developers issued a joint statement this morning: "We are aware of an audio driver anomaly causing unexpected marine wildlife vocalizations. We are working around the clock to deploy a patch. In the meantime, we suggest muting your hardware manually, though we admit, even that isn't entirely working."</p>
-                    <br>
-                    <p><strong>The Internet Embraces the Chaos</strong></p>
-                    <p>While IT departments are tearing their hair out, the internet has done what it does best: turned a crisis into a meme.</p>
-                    <p>TikTok and X (formerly Twitter) are currently flooded with videos of people getting caught off-guard by the digital dolphins. The hashtag #DolphinPocalypse is trending worldwide. Some users have even started counter-trolling, dressing up in scuba gear for their remote work shifts in anticipation of the next squeak.</p>
-                    <p>As of Tuesday afternoon, no hacking collective has stepped forward to claim responsibility for the Great Dolphin Troll of 2026. Whether it’s a disgruntled rogue engineer, an AI experiment gone beautifully wrong, or just the most elaborate digital prank in human history, one thing is certain: the world is listening to its devices a little more cautiously today.</p>
-                    <p>Until a fix is pushed, tech experts offer one final piece of advice: Keep your finger on the power button, and maybe invest in some earplugs.</p>`
+                    content: `<p><strong>SILICON VALLEY —</strong> If you happened to hear a sudden, deafening, high-pitched "EEEE-EEEE-EEEE!" echoing from your coworker's cubicle today, [...]<p>Over the last 48 hours, millions of desktop and laptop users across every major operating system have reported an identical, baffling issue: their computers are randomly bl[...]<br><p><strong>Anatomy of a High-Volume Prank</strong></p><p>The phenomenon doesn't seem to care what you are doing. Victims report the audio triggers during crucial Zoom meetings, late-night study sessions, and quiet library visits.[...]<p>According to reports, the glitch follows a specific, agonizing pattern:</p><p>1. The user's system volume automatically forces itself to 100%.<br>2. All audio outputs (including connected headphones) are bypassed, routing the sound directly to the internal speakers.<br>3. A crisp, studio-quality recording of a bottlenose dolphin plays for exactly 4 seconds.<br>4. The system volume returns to normal, leaving the user stunned and thoroughly embarrassed.</p><p>"I was in the middle of pitching a seven-figure deal to our board of directors," said Marcus Vance, a chief financial officer based in Chicago. "Suddenly, my laptop just sc[...]<br><p><strong>Tech Giants Baffled, Subreddits Explode</strong></p><p>Cybersecurity firms were initially quick to sound the alarm on what they assumed was a highly sophisticated, coordinated malware attack. However, deeper inspection has left[...]<p>An analysis of the affected systems shows a massive influx of user complaints across Reddit and tech support forums:</p><table class="editorial-table"><thead><tr><th>Platform</th><th>Estimated Affected Users</th><th>Top Reported Sympathy</th></tr></thead><tbody><tr><td><strong>Windows 11</strong></td><td>4.2 Million</td><td>"Happened during a funeral stream."</td></tr><tr><td><strong>macOS</strong></td><td>2.8 Million</td><td>"My cat hasn't come out from under the bed."</td></tr><tr><td><strong>Linux</strong></td><td>500,000</td><td>"Even my terminal is mocking me."</td></tr></tbody></table><p>Leading OS developers issued a joint statement this morning: "We are aware of an audio driver anomaly causing unexpected marine wildlife vocalizations. We are working aroun[...]<br><p><strong>The Internet Embraces the Chaos</strong></p><p>While IT departments are tearing their hair out, the internet has done what it does best: turned a crisis into a meme.</p><p>TikTok and X (formerly Twitter) are currently flooded with videos of people getting caught off-guard by the digital dolphins. The hashtag #DolphinPocalypse is trending worl[...]<p>As of Tuesday afternoon, no hacking collective has stepped forward to claim responsibility for the Great Dolphin Troll of 2026. Whether it's a disgruntled rogue engineer,[...]<p>Until a fix is pushed, tech experts offer one final piece of advice: Keep your finger on the power button, and maybe invest in some earplugs.</p>`
                 },
                 right: {
                     hasPuzzle: false,
@@ -915,7 +761,7 @@
                         title: "Dolphin Scuba Costumes Set E-Commerce Records",
                         snippet: "Online apparel stores report 700% spikes in inflatable marine mammal suits as corporate offices lean fully into the #DolphinPocalypse...",
                         author: "Gemma Fairchild",
-                        content: "<p>Remote workers are taking the audio glitches in stride. E-commerce platforms reported that sales of novelty dolphin heads and full wet suits have reached record levels this week.</p><p>'If we're going to get hit with whale noises during Q4 forecasts, we might as well dress for the deep sea,' joked one marketing administrator in Maryland.</p>"
+                        content: "<p>Remote workers are taking the audio glitches in stride. E-commerce platforms reported that sales of novelty dolphin heads and full wet suits have reached reco[...]"
                     }
                 }
             },
@@ -927,7 +773,7 @@
                         title: "Safety Rules Renewed for Churchill Pet Owners",
                         snippet: "Following the terrifying encounter, local officials release safety guides on harness strength, secure yards, and sound deterrents...",
                         author: "Martha Kovich",
-                        content: "<p>Local safety authorities have published a comprehensive set of guidelines urging residents of Churchill to keep pets secure, especially during seasons of high polar bear migration.</p><p>Buster's dramatic escape has sparked a community-wide conversation about fence heights, heavy-duty harnesses, and the universal availability of non-lethal acoustic tools.</p>"
+                        content: "<p>Local safety authorities have published a comprehensive set of guidelines urging residents of Churchill to keep pets secure, especially during seasons of high[...]"
                     }
                 ],
                 main: {
@@ -937,35 +783,9 @@
                     image: "polar_bear_standoff.jpeg",
                     fallbackImage: "https://images.unsplash.com/photo-1589656966895-2f33e7653819?auto=format&fit=crop&w=800&q=80",
                     imageAlt: "Magnificent polar bear in snowy environment",
-                    snippet: "CHURCHILL, MANITOBA — Residents on the wind-swept perimeter of Churchill were treated to a heart-stopping spectacle early Tuesday morning when a loose domestic dog and a migrating polar bear engaged in a high-stakes standoff...",
+                    snippet: "CHURCHILL, MANITOBA — Residents on the wind-swept perimeter of Churchill were treated to a heart-stopping spectacle early Tuesday morning when a loose domestic dog[...]",
                     author: "Staff Correspondent",
-                    content: `<p><strong>CHURCHILL, MANITOBA —</strong> Residents on the wind-swept perimeter of Churchill were treated to a heart-stopping spectacle early Tuesday morning when a loose domestic dog and a migrating polar bear engaged in a dramatic, high-stakes standoff.</p>
-                    <p>The incident, which occurred just after dawn near the town’s rocky coastline, underscores the growing challenges of wildlife management in a region where human, canine, and apex predator territories increasingly overlap.</p>
-                    <br>
-                    <p><strong>A Chance Encounter</strong></p>
-                    <p>According to local witnesses, the drama began when an Alaskan Malamute mix named "Buster" slipped out of his backyard harness and ran loose into the coastal willow flats. Unbeknownst to Buster's owner, a large sub-adult male polar bear, estimated to weigh roughly 700 pounds, was resting in the nearby brush while waiting for the seasonal sea ice to form on Hudson Bay.</p>
-                    <p>The two animals collided near an old storage shed, initiating an immediate and intense duel of posturing and primal instinct.</p>
-                    
-                    <div class="timeline-box">
-                        <div class="timeline-title">[ TIMELINE OF THE CONFRONTATION ]</div>
-                        <div class="timeline-item"><span class="timeline-time">07:15 AM</span> — Buster slips his harness and runs into the flats.</div>
-                        <div class="timeline-item"><span class="timeline-time">07:22 AM</span> — Dog and polar bear make sudden visual contact.</div>
-                        <div class="timeline-item"><span class="timeline-time">07:24 AM</span> — Posturing duel begins; Buster circles, bear lunges.</div>
-                        <div class="timeline-item"><span class="timeline-time">07:28 AM</span> — Local resident fires a standard "cracker shell" warning.</div>
-                        <div class="timeline-item"><span class="timeline-time">07:30 AM</span> — The bear retreats to the coast; Buster is safely retrieved.</div>
-                    </div>
-                    
-                    <p><strong>The Duel of Direct Instincts</strong></p>
-                    <p>Witnesses describe the confrontation not as a chaotic brawl, but as a calculated duel of nerves.</p>
-                    <p>Buster, utilizing his ancestral pack instincts, immediately began circling the apex predator, barking fiercely and snapping at the air to keep the bear from turning its back. The polar bear, initially startled by the aggressive intrusion, rose onto its hind legs to assert its massive size before dropping down to deliver several heavy, warning swats toward the dog.</p>
-                    <p>"It was terrifying to watch," said local resident Martha Kovich, who witnessed the encounter from her kitchen window. "The bear was easily four times the dog's size. Every time the bear lunged, Buster would darty backward just in the nick of time, then press right back in. It was a high-wire act. One misstep and the dog would have been gone."</p>
-                    <p>Despite the immense disparity in power, the dog’s speed and agility allowed it to evade the bear’s lethal claws, keeping the massive carnivore entirely on the defensive for nearly ten tense minutes.</p>
-                    
-                    <p><strong>A Community Intervention</strong></p>
-                    <p>The standoff was brought to an end by the swift action of the local Polar Bear Alert Program. Alerted by the commotion, neighbors fired "cracker shells"—non-lethal, loud acoustic deterrents—into the air. The explosive bangs successfully broke the animals' focus.</p>
-                    <p>Sensing the shifting tide, the polar bear turned and trotted off toward the rocky shoreline, while Buster was safely wrangled by his relieved owner. Remarkably, neither animal sustained any visible injuries.</p>
-                    <p>"This serves as a stark reminder to all residents," a local conservation officer stated following the event. "In the North, an unleashed domestic animal is either viewed as a threat or as prey. We got lucky today, but wildlife boundaries must be respected."</p>
-                    <p>Local authorities have reminded the community to secure all pets, as polar bear activity in the area remains high ahead of the winter freeze.</p>`
+                    content: `<p><strong>CHURCHILL, MANITOBA —</strong> Residents on the wind-swept perimeter of Churchill were treated to a heart-stopping spectacle early Tuesday morning when [...]<p>The incident, which occurred just after dawn near the town's rocky coastline, underscores the growing challenges of wildlife management in a region where human, canine, a[...]<br><p><strong>A Chance Encounter</strong></p><p>According to local witnesses, the drama began when an Alaskan Malamute mix named "Buster" slipped out of his backyard harness and ran loose into the coastal willow flats. U[...]<p>The two animals collided near an old storage shed, initiating an immediate and intense duel of posturing and primal instinct.</p><div class="timeline-box"><div class="timeline-title">[ TIMELINE OF THE CONFRONTATION ]</div><div class="timeline-item"><span class="timeline-time">07:15 AM</span> — Buster slips his harness and runs into the flats.</div><div class="timeline-item"><span class="timeline-time">07:22 AM</span> — Dog and polar bear make sudden visual contact.</div><div class="timeline-item"><span class="timeline-time">07:24 AM</span> — Posturing duel begins; Buster circles, bear lunges.</div><div class="timeline-item"><span class="timeline-time">07:28 AM</span> — Local resident fires a standard "cracker shell" warning.</div><div class="timeline-item"><span class="timeline-time">07:30 AM</span> — The bear retreats to the coast; Buster is safely retrieved.</div></div><p><strong>The Duel of Direct Instincts</strong></p><p>Witnesses describe the confrontation not as a chaotic brawl, but as a calculated duel of nerves.</p><p>Buster, utilizing his ancestral pack instincts, immediately began circling the apex predator, barking fiercely and snapping at the air to keep the bear from turning its bac[...]<p>"It was terrifying to watch," said local resident Martha Kovich, who witnessed the encounter from her kitchen window. "The bear was easily four times the dog's size. Every [...]<p>Despite the immense disparity in power, the dog's speed and agility allowed it to evade the bear's lethal claws, keeping the massive carnivore entirely on the defensive[...]<p><strong>A Community Intervention</strong></p><p>The standoff was brought to an end by the swift action of the local Polar Bear Alert Program. Alerted by the commotion, neighbors fired "cracker shells"—non-lethal, loud [...]<p>Sensing the shifting tide, the polar bear turned and trotted off toward the rocky shoreline, while Buster was safely wrangled by his relieved owner. Remarkably, neither ani[...]<p>"This serves as a stark reminder to all residents," a local conservation officer stated following the event. "In the North, an unleashed domestic animal is either viewed as[...]<p>Local authorities have reminded the community to secure all pets, as polar bear activity in the area remains high ahead of the winter freeze.</p>`
                 },
                 right: {
                     hasPuzzle: false,
@@ -975,7 +795,7 @@
                         title: "Bay Ice Delay Shifts Predator Patterns Inland",
                         snippet: "Conservationists confirm warmer November currents are delaying vital ice formation, driving animals closer to local residential yards...",
                         author: "Dr. Evelyn Wu",
-                        content: "<p>As northern winter temperatures continue to fluctuate, seasonal freeze-ups are occurring up to two weeks later than recorded decadal averages.</p><p>This delay isolates hunting populations along the land fringe, making suburban canine encounters more common. Scientists urge continued vigilance and updated community warning sirens.</p>"
+                        content: "<p>As northern winter temperatures continue to fluctuate, seasonal freeze-ups are occurring up to two weeks later than recorded decadal averages.</p><p>This dela[...]"
                     }
                 }
             },
@@ -987,7 +807,7 @@
                         title: "Global Cheese Alliance Resolves Great Fondue Dispute of 2026",
                         snippet: "A high-stakes diplomatic conference in Geneva has successfully brokered a peace treaty between competing Alpine dairy syndicates, stabilizing global prices...",
                         author: "Henri LeBlanc",
-                        content: "<p>Following six weeks of high-tension trade talks, representatives from Switzerland, France, and Italy have ratified the Accord of Gruyère.</p><p>The dispute, which threatened to halt cheese shipments across major European economic blocks, originated from a disagreement regarding the correct emulsification ratios for export-grade fondue. With the treaty signed, global cheese futures have stabilized, bringing immense relief to restaurateurs worldwide.</p>"
+                        content: "<p>Following six weeks of high-tension trade talks, representatives from Switzerland, France, and Italy have ratified the Accord of Gruyère.</p><p>The dispute, [...]"
                     }
                 ],
                 main: {
@@ -997,381 +817,196 @@
                     image: "sky_acoustic_phenomenon.jpeg",
                     fallbackImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
                     imageAlt: "Stylized atmospheric light scan",
-                    snippet: "A persistent, low-frequency sound resembling a distant cello has been reported by millions across coastal cities. Atmospheric geophysicists suggest stratospheric wind friction might be to blame...",
-                    author: "Marcus Finch",
-                    content: "<p>An atmospheric mystery of unprecedented scale has unfolded over the last 48 hours. Millions of residents stretching from Oslo to Seattle have reported hearing a gentle, harmonic hum vibrating through the air. Dubbed 'The Stratospheric Sonata,' the pitch remains a steady 110Hz.</p><p>While amateur doomsday theorists point to magnetic anomalies, atmospheric geophysicists confidently claim it is merely the result of unusual seasonal jet stream friction rubbing against clean pocket clouds in the upper troposphere.</p>"
+                    snippet: "A persistent, low-frequency sound resembling a distant cello has been reported by millions across coastal cities. Atmospheric geophysicists suggest stratospheric wi[...]",
+                    author: "Senior Correspondent",
+                    content: "<p>A mysterious phenomenon has been confirmed by scientists worldwide.</p><p>Multiple research institutions have begun analyzing the phenomenon[...]"
                 },
                 right: {
                     hasPuzzle: false,
                     extraStory: {
-                        id: "solar_owls",
-                        tag: "Global Science",
-                        title: "Desert Solar Grid Accidental Paradise for Endangered Burrowing Owls",
-                        snippet: "A massive clean-energy plant in Mojave desert has become an unexpected sanctuary for local owls seeking shade from the harsh sun...",
-                        author: "Sarah Sterling",
-                        content: "<p>In a heartwarming twist for environmentalists, the Mojave Solar Expansion Project has recorded a 300% increase in local burrowing owl populations.</p><p>The thousands of giant mirrors provide clean, cool shade zones during the brutal midday heat, shielding the owls from aerial predators. The facility has hired dedicated ecological guards to ensure the birds can nesting safely alongside the engineering teams.</p>"
+                        id: "world_update",
+                        tag: "Global Update",
+                        title: "International Response to Recent Events",
+                        snippet: "Countries around the world share perspectives on recent global developments...",
+                        author: "Global Correspondent",
+                        content: "<p>International observers continue to monitor developments closely.</p><p>More information as it becomes available[...]"
                     }
-                }
-            },
-            local: {
-                left: [
-                    {
-                        id: "squash_wars",
-                        tag: "Municipal Affairs",
-                        title: "Community Garden Micro-Grants Yield Gigantic Giant Squash",
-                        snippet: "A small-scale neighborhood fund has sparked a vegetable arms race in the East District, culminating in a 400-pound record-breaking squash...",
-                        author: "Nate Reynolds",
-                        content: "<p>What began as a $500 community grant for organic topsoil has transformed the East District allotment into a highly competitive horticultural arena.</p><p>Local retired mechanic Albert Miller unveiled his masterpiece: a monumental 412-pound green squash nurtured on custom compost formulas. 'The secret is talking to it softly at midnight,' Miller whispered to our regional agricultural correspondent.</p>"
-                    }
-                ],
-                main: {
-                    id: "typewriter_shop_story",
-                    tag: "Metropolitan Business",
-                    title: "Vintage Typewriter Shops Face Supply Shortage as Tech Detox Hits Peaks",
-                    image: "typewriter_shop.jpeg",
-                    fallbackImage: "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?auto=format&fit=crop&w=800&q=80",
-                    imageAlt: "Row of classic mechanical typewriters",
-                    snippet: "A cultural pivot away from screens has left regional boutique typewriter mechanics empty-handed. Waiting lists for manual ribbon machines have ballooned to six months...",
-                    author: "Penelope Cruz",
-                    content: "<p>A profound digital detox movement has swept the city's creative workforce. Disenchanted with constant screen notifications, novelists, poets, and lawyers are flocking to analog alternatives.</p><p>Standard Smith-Corona and Remington models have surged in value by over 400%. Boutique repair shops are reporting historic shortages of ink ribbons and carriage springs, prompting many to scour rural estate sales to satisfy the ravenous local demand.</p>"
-                },
-                right: {
-                    hasPuzzle: false,
-                    extraStory: {
-                        id: "quiet_cars",
-                        tag: "Transit Updates",
-                        title: "Subway System to Introduce Quiet Cars for Silent Reading and Knitting",
-                        snippet: "Commuters celebrate as transit authorities designate rear rail cars exclusively for quiet, analog hobbies and zero mobile phone activity...",
-                        author: "Marcus Vance",
-                        content: "<p>Starting next Monday, the City Transit Commission will trial 'The Sanctuary Cabin' on the Red Line.</p><p>Passengers boarding these specific rear cars must agree to silence their phones, refrain from talking, and engage solely in peaceful, quiet activities like reading physical media, sketching, or knitting. Early commuter polls suggest a massive public interest.</p>"
-                    }
-                }
-            },
-            science: {
-                left: [
-                    {
-                        id: "space_signal",
-                        tag: "Astrophysics",
-                        title: "Deep Space Telescope Detects Repetitive Patterns from Kepler-186f",
-                        snippet: "Astronomers confirm highly rhythmic electromagnetic pulses originating from a neighboring system, though they suspect cosmic dust friction over alien communications...",
-                        author: "Dr. Aris Thorne",
-                        content: "<p>Astronomers at the Deep Space Observatory have recorded a series of highly rhythmic, recurring signals coming from the habitable exoplanet Kepler-186f. Spanning a exact 12-second cycle, the pulses resemble standard telemetry data.</p><p>However, lead researcher Dr. Thorne urged patience: 'Before we call the press for first contact, we are thoroughly testing if a spinning magnetar or specialized dust cloud friction is generating these beautifully clean pulses.'</p>"
-                    }
-                ],
-                main: {
-                    id: "puddle_tension",
-                    tag: "Environmental Discovery",
-                    title: "Puddles in Central Park Found to Defy Standard Gravity Rules",
-                    image: "gravity_puddle.jpeg",
-                    fallbackImage: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80",
-                    imageAlt: "Stylized reflection in park puddle",
-                    snippet: "A peculiar physical anomaly has scientists baffled as rainwater in specific central rocky trails forms slightly domed structures that refuse to spill over...",
-                    author: "Lana Foster",
-                    content: "<p>Local university physicists have set up temporary research tents around several rock pools in Central Park.</p><p>Due to an unexplained, microscopic mineral deposit left behind by recent meteor showers, the rainwater in these specific depressions exhibits immense surface tension. This creates beautiful, domed water structures that rise nearly two inches above the stone surface without breaking or spilling.</p>"
-                },
-                right: {
-                    hasPuzzle: false,
-                    extraStory: {
-                        id: "book_scent",
-                        tag: "Neurology Briefing",
-                        title: "Why Your Brain Prefers the Scent of Vintage Books to E-Readers",
-                        snippet: "New neurological scans explain why the chemical breakdown of paper fibers triggers deep nostalgia centers inside the human amygdala...",
-                        author: "Dr. Evelyn Wu",
-                        content: "<p>A study published in the Brain and Behavior Journal reveals that as physical paper ages, the slow chemical breakdown of cellulose produces trace amounts of vanillin and almond-like compounds.</p><p>These specific scents bypass normal cognitive processing centers, traveling straight to the amygdala. This triggers an instant sensation of safety, nostalgia, and calm that digital screens simply cannot replicate.</p>"
-                    }
-                }
-            },
-            fashion: {
-                left: [
-                    {
-                        id: "bowler_hats",
-                        tag: "Metropolitan Style",
-                        title: "Bowler Hats Witness Surprising Revival Among Tech Entrepreneurs",
-                        snippet: "Move over casual hoodies—traditional formal headwear is finding a modern niche in the high-stakes startup communities...",
-                        author: "Douglas Vance",
-                        content: "<p>In a bizarre turn of sartorial trends, executive founders in major technology parks are discarding their generic silicone-molded athletic shoes and hooded sweatshirts in favor of tailored suits and authentic wool-felt bowler hats.</p><p>Proponents claim the structured look commands immediate respect in modern venture capital pitches.</p>"
-                    }
-                ],
-                main: {
-                    id: "linen_fast",
-                    tag: "Sartorial Investigation",
-                    title: "The Ultimate Death of Fast Fashion as Bespoke Linen Sweeps Summer",
-                    image: "linen_weaving.jpeg",
-                    fallbackImage: "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=800&q=80",
-                    imageAlt: "Bespoke neutral textured fabric close up",
-                    snippet: "Economic shifts combined with environmental awareness have fueled an unprecedented demand for localized weaving circles and custom-fit hemp garbs...",
-                    author: "Gemma Fairchild",
-                    content: "<p>The age of throwaway garments is facing a sharp collapse. Consumers are increasingly turning to small, regional weaving collectives that offer lifetime warranties on bespoke linen and hemp garments.</p><p>'People are realizing that having four perfectly tailored, breathable items is infinitely superior to owning fifty synthetic shirts that deteriorate in three washes,' says designer Gemma Fairchild.</p>"
-                },
-                right: {
-                    hasPuzzle: false,
-                    extraStory: {
-                        id: "monocles_genz",
-                        tag: "Grooming Trends",
-                        title: "Monocles and Vintage Pocket Watches Enter Gen-Z Mainstream",
-                        snippet: "Pocket watches and single-glass spectacles are flying off vintage store shelves as youth culture rejects smart wear...",
-                        author: "Alistair Sterling",
-                        content: "<p>Rejecting wearable smartwatches that constantly track health metrics and push advertisements, younger generations are opting for total mechanical independence.</p><p>Antique brass pocket watches and classic wire-framed monocles have become the ultimate counter-culture accessories of the year.</p>"
-                    }
-                }
-            },
-            puzzles: {
-                left: [
-                    {
-                        id: "cryptic_brains",
-                        tag: "Brain Training",
-                        title: "Solving Cryptic Crosswords Proven to Delay Mental Fatigue",
-                        snippet: "Long-term study tracks cognitive agility benefits of solving linguistic and pattern puzzles compared to scrolling feeds...",
-                        author: "Prof. Arthur Pendelton",
-                        content: "<p>A decades-long study of senior citizens has concluded that engaging with cryptic linguistic patterns, such as complex crosswords and word jumbles, creates strong neural pathways.</p><p>This acts as a protective buffer against normal age-related cognitive fatigue, proving that challenging your mind is the best daily exercise you can perform.</p>"
-                    }
-                ],
-                main: {
-                    id: "jumble_spotlight",
-                    tag: "Interactive Spotlight",
-                    title: "The Metropolitan Daily Mind-Bender: Word Jumble Challenge",
-                    image: "puzzle_graphics.jpeg",
-                    fallbackImage: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80",
-                    imageAlt: "Stylized abstract grid",
-                    snippet: "Challenge your vocabulary skills with our community-loved daily word jumble below. Unscramble the letters to prove your linguistic prowess to our editorial staff!",
-                    author: "The Puzzle Master",
-                    content: "<p>Every morning, our editorial team handcrafts a special linguistic puzzle to test the critical faculties of our global readership. This feature, which dates back to our original print editions of 1904, remains one of our most celebrated traditions.</p><p>Scroll to our interactive puzzle box on the right to test your resolve!</p>"
-                },
-                right: {
-                    hasPuzzle: true,
-                    extraStory: null
                 }
             }
         };
 
-        // Puzzle state setup
-        const wordPool = [
-            { scrambled: "N A B A N A", clean: "BANANA" },
-            { scrambled: "E C I L C O N H R", clean: "CHRONICLE" },
-            { scrambled: "W E N S P A P E R", clean: "NEWSPAPER" },
-            { scrambled: "E D I T O R I A L", clean: "EDITORIAL" },
-            { scrambled: "S U B M E R S I B L E", clean: "SUBMERSIBLE" }
-        ];
-        
-        let selectedPuzzle = wordPool[0];
-
-        // On document load, default to Front Page
-        window.onload = function() {
+        // Initialize the page
+        function initializePage() {
+            renderMenuItems();
+            renderTiles();
             loadCategory('front');
-            initializePuzzle();
-        };
+        }
 
-        // Sidebar Navigation Toggles
+        // Sidebar toggle function
         function toggleSidebar(open) {
-            const sidebar = document.getElementById("sidebar");
-            const overlay = document.getElementById("overlay");
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
             if (open) {
-                sidebar.classList.add("open");
-                overlay.classList.add("active");
+                sidebar.classList.add('open');
+                overlay.classList.add('active');
             } else {
-                sidebar.classList.remove("open");
-                overlay.classList.remove("active");
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
             }
         }
 
-        // Feature Tiles Banner controller
-        function quickSelectTile(categoryKey, storyId) {
-            // Remove active style from all tiles
-            const tiles = document.querySelectorAll(".tile-card");
-            tiles.forEach(t => t.classList.remove("active"));
+        // Load category content
+        function loadCategory(category) {
+            const categoryData = newsDatabase[category];
+            if (!categoryData) return;
 
-            // Load the category to show summaries on the homepage, preventing auto-scroll
-            loadCategory(categoryKey, true);
-
-            // Add active style to corresponding tile
-            let activeTileId = "tile-front";
-            if (storyId === "tundra_polar") activeTileId = "tile-polar";
-            else if (storyId === "keyboard_main") activeTileId = "tile-keyboard";
-            else if (storyId === "sarcasm_plants") activeTileId = "tile-sarcasm";
-            else if (storyId === "dolphin_main") activeTileId = "tile-dolphin";
-            else if (storyId === "marine_main") activeTileId = "tile-marine";
-            else if (storyId === "furniture_geddon") activeTileId = "tile-banana";
-
-            const activeTile = document.getElementById(activeTileId);
-            if (activeTile) activeTile.classList.add("active");
-        }
-
-        // Section Loader
-        function loadCategory(categoryKey, preventScroll = false) {
-            // Update active state in sidebar UI
-            const links = document.querySelectorAll(".sidebar-nav a");
-            links.forEach(link => link.classList.remove("active"));
-            
-            const activeId = `nav-${categoryKey}`;
-            const activeLink = document.getElementById(activeId);
-            if (activeLink) activeLink.classList.add("active");
-
-            // Update Page Header Label
-            const headerDisplay = document.getElementById("section-header-display");
-            const titles = {
-                front: "Front Page Edition",
-                banana: "The Banana Desk — Special Report",
-                marine: "Marine & Culinary Desk",
-                tundra: "Tundra & Wildlife Desk",
-                tech: "Tech & Cyber Watch",
-                world: "World & Global Affairs",
-                local: "Local & Business Economy",
-                science: "The Science Desk",
-                fashion: "Fashion, Style & Lifestyle",
-                puzzles: "The Puzzles & Leisure Desk"
-            };
-            headerDisplay.innerText = titles[categoryKey] || "Editorial Desks";
-
-            // Grab the corresponding content block
-            const data = newsDatabase[categoryKey];
-            const mainGrid = document.getElementById("main-content-grid");
-
-            if (!data) return;
-
-            // Close sidebar
             toggleSidebar(false);
+            
+            // Update active menu item
+            document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+            const activeNav = document.getElementById(`nav-${category}`);
+            if (activeNav) activeNav.classList.add('active');
 
-            // Construct Column 1 (Left Column)
-            let leftColHTML = "";
-            data.left.forEach((story, idx) => {
-                leftColHTML += `
-                    <span class="story-tag ui-label">${story.tag}</span>
-                    <h3 class="sub-title"><a onclick="openArticle(${JSON.stringify(story).replace(/"/g, '&quot;')})">${story.title}</a></h3>
-                    <p class="snippet">${story.snippet}</p>
-                    <p class="author ui-label">By ${story.author}</p>
-                `;
-                if (idx < data.left.length - 1) {
-                    leftColHTML += `<div class="divider-line"></div>`;
-                }
+            // Update header
+            const categoryLabel = menuItems.find(m => m.category === category)?.label || 'Front Page';
+            document.getElementById('section-header-display').textContent = categoryLabel + ' Edition';
+
+            renderContent(categoryData);
+        }
+
+        // Render main content grid
+        function renderContent(categoryData) {
+            const grid = document.getElementById('main-content-grid');
+            grid.innerHTML = '';
+
+            // Left column
+            const colLeft = document.createElement('div');
+            colLeft.className = 'col-left';
+            categoryData.left.forEach(article => {
+                colLeft.innerHTML += createArticleHTML(article);
             });
+            grid.appendChild(colLeft);
 
-            // Construct Column 2 (Main Lead Story Column)
-            const lead = data.main;
-            const mainColHTML = `
-                <span class="story-tag ui-label" style="font-size: 0.9rem; font-weight: bold;">${lead.tag}</span>
-                <h2 class="main-title"><a onclick="openArticle(${JSON.stringify(lead).replace(/"/g, '&quot;')})">${lead.title}</a></h2>
-                
-                <div class="news-img-box">
-                    <img src="${lead.image}" alt="${lead.imageAlt}" onerror="this.onerror=null; this.src='${lead.fallbackImage}';">
-                </div>
+            // Main column
+            const colMain = document.createElement('div');
+            categoryData.main && (colMain.innerHTML += createMainArticleHTML(categoryData.main));
+            grid.appendChild(colMain);
 
-                <p class="snippet"><strong>SUMMARY —</strong> ${lead.snippet}</p>
-                <p class="author ui-label">By ${lead.author}</p>
-                <button class="ui-label" style="background: none; border: 1px solid #111; padding: 6px 12px; margin-top: 10px; cursor: pointer; font-weight: bold; font-size: 0.75rem;" onclick="openArticle(${JSON.stringify(lead).replace(/"/g, '&quot;')})">Read Full Chronicle</button>
+            // Right column
+            const colRight = document.createElement('div');
+            colRight.className = 'col-right';
+            if (categoryData.right.hasPuzzle) {
+                colRight.innerHTML += createPuzzleHTML();
+            }
+            categoryData.right.extraStory && (colRight.innerHTML += createArticleHTML(categoryData.right.extraStory));
+            grid.appendChild(colRight);
+        }
+
+        // Create article HTML
+        function createArticleHTML(article) {
+            return `
+                <article onclick="openArticle('${article.id}')">
+                    <span class="story-tag">${article.tag}</span>
+                    <h3 class="sub-title">${article.title}</h3>
+                    <p class="author">By ${article.author}</p>
+                    <p class="snippet">${article.snippet}</p>
+                    <div class="divider-line"></div>
+                </article>
             `;
+        }
 
-            // Construct Column 3 (Right Column: Puzzle & Features)
-            let rightColHTML = "";
-            if (data.right.hasPuzzle) {
-                rightColHTML += `
-                    <div class="puzzle-box">
-                        <span class="story-tag ui-label">The Daily Mind-Bender</span>
-                        <h3 class="ui-label" style="font-family: sans-serif; font-size: 1rem; border-bottom: 2px solid #111; padding-bottom: 4px; margin-bottom: 12px;">Word Jumble</h3>
-                        <p style="font-size: 0.9rem; margin-bottom: 12px; font-family: sans-serif;">Unscramble the media-related word below:</p>
-                        
-                        <div class="scrambled-word" id="jumble-container">${selectedPuzzle.scrambled}</div>
-                        
-                        <input type="text" id="puzzle-input" class="ui-label" placeholder="Type your guess here..." autocomplete="off">
-                        <button type="button" class="ui-label" onclick="checkPuzzleAnswer()">Submit Guess</button>
-                        
-                        <div id="puzzle-feedback"></div>
+        // Create main article HTML
+        function createMainArticleHTML(article) {
+            return `
+                <article onclick="openArticle('${article.id}')">
+                    <span class="story-tag">${article.tag}</span>
+                    <h2 class="main-title">${article.title}</h2>
+                    <p class="author">By ${article.author}</p>
+                    <div class="news-img-box">
+                        <img src="${article.image}" alt="${article.imageAlt}" onerror="this.src='${article.fallbackImage}'">
                     </div>
-                `;
-            }
+                    <p class="snippet">${article.snippet}</p>
+                </article>
+            `;
+        }
 
-            if (data.right.extraStory) {
-                if (data.right.hasPuzzle) {
-                    rightColHTML += `<div class="divider-line"></div>`;
+        // Create puzzle HTML
+        function createPuzzleHTML() {
+            return `
+                <div class="puzzle-box">
+                    <h3>Daily Puzzle: Unscramble This!</h3>
+                    <div class="scrambled-word">MBRAANN</div>
+                    <input type="text" id="puzzle-answer" placeholder="Your answer here...">
+                    <button onclick="solvePuzzle()">Submit</button>
+                    <div id="puzzle-feedback"></div>
+                </div>
+            `;
+        }
+
+        // Open article in modal
+        function openArticle(articleId) {
+            const modal = document.getElementById('article-modal');
+            const body = document.getElementById('modal-article-body');
+
+            // Search for article in newsDatabase
+            for (let category in newsDatabase) {
+                const data = newsDatabase[category];
+                
+                let article = null;
+                if (data.main?.id === articleId) article = data.main;
+                else if (data.left?.find(a => a.id === articleId)) article = data.left.find(a => a.id === articleId);
+                else if (data.right?.extraStory?.id === articleId) article = data.right.extraStory;
+
+                if (article) {
+                    body.innerHTML = `
+                        <h2>${article.title}</h2>
+                        <div class="modal-meta">
+                            <span>${article.tag}</span>
+                            <span>By ${article.author}</span>
+                        </div>
+                        ${article.image ? `<img class="modal-img" src="${article.image}" alt="${article.imageAlt}" onerror="this.src='${article.fallbackImage}'">` : ''}
+                        <div class="modal-text">${article.content}</div>
+                    `;
+                    modal.classList.add('active');
+                    return;
                 }
-                const extra = data.right.extraStory;
-                rightColHTML += `
-                    <span class="story-tag ui-label">${extra.tag}</span>
-                    <h3 class="sub-title"><a onclick="openArticle(${JSON.stringify(extra).replace(/"/g, '&quot;')})">${extra.title}</a></h3>
-                    <p class="snippet">${extra.snippet}</p>
-                `;
-            }
-
-            // Combine together in DOM
-            mainGrid.innerHTML = `
-                <aside class="col-left">${leftColHTML}</aside>
-                <section class="col-main">${mainColHTML}</section>
-                <aside class="col-right">${rightColHTML}</aside>
-            `;
-
-            // Keep scroll positioned back at top of content window unless prevented
-            if (!preventScroll) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
 
-        // Article Modal Open
-        function openArticle(story) {
-            const modal = document.getElementById("article-modal");
-            const modalBody = document.getElementById("modal-article-body");
-
-            let imageMarkup = "";
-            if (story.image) {
-                imageMarkup = `<img src="${story.image}" class="modal-img" onerror="this.onerror=null; this.src='${story.fallbackImage || 'https://images.unsplash.com/photo-1546074177-ffedd1d85d4b?auto=format&fit=crop&w=800&q=80'}';" alt="Lead Graphic">`;
-            }
-
-            modalBody.innerHTML = `
-                <span class="story-tag ui-label">${story.tag || "Newsroom Special"}</span>
-                <h2>${story.title}</h2>
-                <div class="modal-meta ui-label">
-                    <span>By ${story.author || "Staff Writer"}</span>
-                    <span>MD Chronicle Archives</span>
-                </div>
-                ${imageMarkup}
-                <div class="modal-text">
-                    ${story.content}
-                </div>
-            `;
-            modal.classList.add("active");
-            document.body.style.overflow = "hidden"; // Disable backdrop scroll
-        }
-
-        // Close Article Modal
+        // Close article modal
         function closeArticle() {
-            const modal = document.getElementById("article-modal");
-            modal.classList.remove("active");
-            document.body.style.overflow = "auto";
+            document.getElementById('article-modal').classList.remove('active');
         }
 
-        // Close modal on outer background click
         function closeModalOnOuterClick(event) {
-            if (event.target.id === "article-modal") {
+            if (event.target.id === 'article-modal') {
                 closeArticle();
             }
         }
 
-        // Puzzle Logic
-        function initializePuzzle() {
-            selectedPuzzle = wordPool[Math.floor(Math.random() * wordPool.length)];
-            const container = document.getElementById("jumble-container");
-            if (container) {
-                container.innerText = selectedPuzzle.scrambled;
+        // Quick select tile
+        function quickSelectTile(category, contentId) {
+            loadCategory(category);
+            document.querySelectorAll('.tile-card').forEach(t => t.classList.remove('active'));
+            document.getElementById(`tile-${contentId.split('_')[0]}`).classList.add('active');
+        }
+
+        // Solve puzzle
+        function solvePuzzle() {
+            const answer = document.getElementById('puzzle-answer').value.toLowerCase().trim();
+            const feedback = document.getElementById('puzzle-feedback');
+            
+            if (answer === 'banana') {
+                feedback.textContent = '✓ Correct! You found the answer!';
+                feedback.style.color = '#00cc66';
+            } else {
+                feedback.textContent = '✗ Try again!';
+                feedback.style.color = '#ff4444';
             }
         }
 
-        function checkPuzzleAnswer() {
-            const userGuess = document.getElementById("puzzle-input").value.trim().toUpperCase();
-            const feedbackBox = document.getElementById("puzzle-feedback");
-            
-            if (userGuess === selectedPuzzle.clean) {
-                feedbackBox.style.color = "#00cc66";
-                feedbackBox.innerText = "✓ Correct! Editorial staff commends you.";
-                
-                // Load another one in 3 seconds
-                setTimeout(() => {
-                    initializePuzzle();
-                    document.getElementById("puzzle-input").value = "";
-                    feedbackBox.innerText = "";
-                }, 3000);
-            } else {
-                feedbackBox.style.color = "#ff4444";
-                feedbackBox.innerText = "✗ Incorrect. Check spelling and retry.";
-            }
-        }
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initializePage);
     </script>
 </body>
 </html>
