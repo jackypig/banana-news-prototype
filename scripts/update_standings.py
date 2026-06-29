@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Scrapes 2026 FIFA World Cup group standings from Wikipedia and patches
-the STANDINGS_START/END block in index.html.
+the inlineHTML field in sections/worldcup/data.json.
 
 Run manually:
     python3 scripts/update_standings.py
@@ -19,9 +19,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 # ── Config ────────────────────────────────────────────────────────────────────
-ROOT       = Path(__file__).resolve().parent.parent
-INDEX_HTML = ROOT / "index.html"
-LOG_FILE   = ROOT / "scripts" / "update.log"
+ROOT             = Path(__file__).resolve().parent.parent
+WORLDCUP_JSON    = ROOT / "sections" / "worldcup" / "data.json"
+LOG_FILE         = ROOT / "scripts" / "update.log"
 SOURCE_URL = "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_{letter}"
 GROUP_LETTERS = list("ABCDEFGHIJKL")
 
@@ -258,12 +258,18 @@ def build_html(groups: list) -> str:
 
 
 def patch_html(new_block: str):
-    html = INDEX_HTML.read_text(encoding="utf-8")
-    pattern = r'<!-- STANDINGS_START -->.*?<!-- STANDINGS_END -->'
-    updated, count = re.subn(pattern, new_block, html, flags=re.DOTALL)
-    if count == 0:
-        raise RuntimeError("STANDINGS_START/END markers not found in index.html")
-    INDEX_HTML.write_text(updated, encoding="utf-8")
+    import json
+    if not WORLDCUP_JSON.exists():
+        raise RuntimeError(f"{WORLDCUP_JSON} not found")
+    data = json.loads(WORLDCUP_JSON.read_text(encoding="utf-8"))
+    # Preserve the header markup above the standings block
+    header = (
+        '\n<span class="story-tag ui-label">Group Stage — Final Standings</span>\n'
+        '<h3 class="ui-label" style="font-size:1rem; margin-bottom:8px; font-family:sans-serif; border-bottom: 2px solid #111; padding-bottom:4px;">All 12 Groups</h3>\n'
+        '<p style="font-size:0.75rem;font-family:sans-serif;color:#555;margin-bottom:8px;">✓ Qualified for Round of 32 &nbsp;·&nbsp; P &nbsp;W &nbsp;D &nbsp;L &nbsp;Pts</p>\n'
+    )
+    data["right"]["inlineHTML"] = header + new_block + "\n"
+    WORLDCUP_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -288,10 +294,10 @@ def main():
     try:
         patch_html(new_block)
     except Exception as e:
-        log(f"ERROR patching index.html: {e}")
+        log(f"ERROR patching sections/worldcup/data.json: {e}")
         sys.exit(1)
 
-    log(f"index.html updated successfully ({len(groups)} groups)")
+    log(f"sections/worldcup/data.json updated successfully ({len(groups)} groups)")
 
 
 if __name__ == "__main__":

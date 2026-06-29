@@ -1,0 +1,35 @@
+{
+  "left": [
+    {
+      "id": "bowler_hats",
+      "tag": "Metropolitan Style",
+      "title": "Bowler Hats Witness Surprising Revival Among Tech Entrepreneurs",
+      "snippet": "Move over casual hoodies—traditional formal headwear is finding a modern niche in the high-stakes startup communities...",
+      "author": "Douglas Vance",
+      "content": "<p>In a bizarre turn of sartorial trends, executive founders in major technology parks are discarding their generic silicone-molded athletic shoes and hooded sweatshirts in favor of tailored suits and authentic wool-felt bowler hats.</p><p>Proponents claim the structured look commands immediate respect in modern venture capital pitches.</p>"
+    }
+  ],
+  "main": {
+    "id": "linen_fast",
+    "tag": "Sartorial Investigation",
+    "title": "The Ultimate Death of Fast Fashion as Bespoke Linen Sweeps Summer",
+    "image": "linen_weaving.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Bespoke neutral textured fabric close up",
+    "snippet": "Economic shifts combined with environmental awareness have fueled an unprecedented demand for localized weaving circles and custom-fit hemp garbs...",
+    "author": "Gemma Fairchild",
+    "content": "<p>The age of throwaway garments is facing a sharp collapse. Consumers are increasingly turning to small, regional weaving collectives that offer lifetime warranties on bespoke linen and hemp garments.</p><p>'People are realizing that having four perfectly tailored, breathable items is infinitely superior to owning fifty synthetic shirts that deteriorate in three washes,' says designer Gemma Fairchild.</p>"
+  },
+  "right": {
+    "hasPuzzle": false,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "monocles_genz",
+      "tag": "Grooming Trends",
+      "title": "Monocles and Vintage Pocket Watches Enter Gen-Z Mainstream",
+      "snippet": "Pocket watches and single-glass spectacles are flying off vintage store shelves as youth culture rejects smart wear...",
+      "author": "Alistair Sterling",
+      "content": "<p>Rejecting wearable smartwatches that constantly track health metrics and push advertisements, younger generations are opting for total mechanical independence.</p><p>Antique brass pocket watches and classic wire-framed monocles have become the ultimate counter-culture accessories of the year.</p>"
+    }
+  }
+}

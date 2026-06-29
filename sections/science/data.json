@@ -1,0 +1,35 @@
+{
+  "left": [
+    {
+      "id": "space_signal",
+      "tag": "Astrophysics",
+      "title": "Deep Space Telescope Detects Repetitive Patterns from Kepler-186f",
+      "snippet": "Astronomers confirm highly rhythmic electromagnetic pulses originating from a neighboring system, though they suspect cosmic dust friction over alien communications...",
+      "author": "Dr. Aris Thorne",
+      "content": "<p>Astronomers at the Deep Space Observatory have recorded a series of highly rhythmic, recurring signals coming from the habitable exoplanet Kepler-186f. Spanning a exact 12-second cycle, the pulses resemble standard telemetry data.</p><p>However, lead researcher Dr. Thorne urged patience: 'Before we call the press for first contact, we are thoroughly testing if a spinning magnetar or specialized dust cloud friction is generating these beautifully clean pulses.'</p>"
+    }
+  ],
+  "main": {
+    "id": "puddle_tension",
+    "tag": "Environmental Discovery",
+    "title": "Puddles in Central Park Found to Defy Standard Gravity Rules",
+    "image": "gravity_puddle.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Stylized reflection in park puddle",
+    "snippet": "A peculiar physical anomaly has scientists baffled as rainwater in specific central rocky trails forms slightly domed structures that refuse to spill over...",
+    "author": "Lana Foster",
+    "content": "<p>Local university physicists have set up temporary research tents around several rock pools in Central Park.</p><p>Due to an unexplained, microscopic mineral deposit left behind by recent meteor showers, the rainwater in these specific depressions exhibits immense surface tension. This creates beautiful, domed water structures that rise nearly two inches above the stone surface without breaking or spilling.</p>"
+  },
+  "right": {
+    "hasPuzzle": false,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "book_scent",
+      "tag": "Neurology Briefing",
+      "title": "Why Your Brain Prefers the Scent of Vintage Books to E-Readers",
+      "snippet": "New neurological scans explain why the chemical breakdown of paper fibers triggers deep nostalgia centers inside the human amygdala...",
+      "author": "Dr. Evelyn Wu",
+      "content": "<p>A study published in the Brain and Behavior Journal reveals that as physical paper ages, the slow chemical breakdown of cellulose produces trace amounts of vanillin and almond-like compounds.</p><p>These specific scents bypass normal cognitive processing centers, traveling straight to the amygdala. This triggers an instant sensation of safety, nostalgia, and calm that digital screens simply cannot replicate.</p>"
+    }
+  }
+}

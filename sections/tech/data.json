@@ -1,0 +1,35 @@
+{
+  "left": [
+    {
+      "id": "hardware_switch",
+      "tag": "Tech Security",
+      "title": "Security Experts Suggest Total Audio Hardware Isolation",
+      "snippet": "Following the wild dolphin-drop occurrences, security firms are advocating for hard physical switches to prevent drivers from forcing maximum volumes...",
+      "author": "Linus Patterson",
+      "content": "<p>In the wake of the 'Fin-Ware' phenomenon, hardware engineers and digital privacy experts are urging computer designers to implement physical, tactile audio connection breakers.</p><p>Currently, software-based audio drivers can easily override system parameters and set physical lines to full volume. A hard-wired analog interrupt switch would give final, physical priority control back to desktop users.</p>"
+    }
+  ],
+  "main": {
+    "id": "dolphin_main",
+    "tag": "Cyber Alert",
+    "title": "GLOBAL PANIC OR GLOBAL PRANK? The Week Worldwide Audio Drivers Went \"Dolphin\"",
+    "image": "dolphin_driver_hack.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1570481662006-a3a1374699e8?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "A bottlenose dolphin looking playful",
+    "snippet": "SILICON VALLEY — If you happened to hear a sudden, deafening, high-pitched \"EEEE-EEEE-EEEE!\" echoing from your coworker's cubicle today, don't worry: they aren't secretly harboring a marine mammal. They are just the latest victim of 'Fin-Ware'...",
+    "author": "Senior Tech Correspondent Raymond Vance",
+    "content": "<p><strong>SILICON VALLEY —</strong> If you happened to hear a sudden, deafening, high-pitched \"EEEE-EEEE-EEEE!\" echoing from your coworker's cubicle today, don't worry: they aren't secretly harboring a marine mammal. They are just the latest victim of \"Fin-Ware,\" a mysterious and hilarious global phenomenon that has effectively turned the world's computers into digital trolls.</p>\n<p>Over the last 48 hours, millions of desktop and laptop users across every major operating system have reported an identical, baffling issue: their computers are randomly blasting dolphin sound effects at absolute maximum volume.</p>\n<br>\n<p><strong>Anatomy of a High-Volume Prank</strong></p>\n<p>The phenomenon doesn't seem to care what you are doing. Victims report the audio triggers during crucial Zoom meetings, late-night study sessions, and quiet library visits.</p>\n<p>According to reports, the glitch follows a specific, agonizing pattern:</p>\n<p>1. The user's system volume automatically forces itself to 100%.<br>\n2. All audio outputs (including connected headphones) are bypassed, routing the sound directly to the internal speakers.<br>\n3. A crisp, studio-quality recording of a bottlenose dolphin plays for exactly 4 seconds.<br>\n4. The system volume returns to normal, leaving the user stunned and thoroughly embarrassed.</p>\n<p>\"I was in the middle of pitching a seven-figure deal to our board of directors,\" said Marcus Vance, a chief financial officer based in Chicago. \"Suddenly, my laptop just screamed at me like an angry Flipper. I tried to slam the laptop shut, but it just kept squeaking from the hinges. The board thought I was having a breakdown.\"</p>\n<br>\n<p><strong>Tech Giants Baffled, Subreddits Explode</strong></p>\n<p>Cybersecurity firms were initially quick to sound the alarm on what they assumed was a highly sophisticated, coordinated malware attack. However, deeper inspection has left experts scratching their heads. The code behind the \"dolphin drop\" doesn't steal data, encrypt files, or demand Bitcoin. It just... trolls.</p>\n<p>An analysis of the affected systems shows a massive influx of user complaints across Reddit and tech support forums:</p>\n\n<table class=\"editorial-table\">\n<thead>\n<tr><th>Platform</th><th>Estimated Affected Users</th><th>Top Reported Sympathy</th></tr>\n</thead>\n<tbody>\n<tr><td><strong>Windows 11</strong></td><td>4.2 Million</td><td>\"Happened during a funeral stream.\"</td></tr>\n<tr><td><strong>macOS</strong></td><td>2.8 Million</td><td>\"My cat hasn't come out from under the bed.\"</td></tr>\n<tr><td><strong>Linux</strong></td><td>500,000</td><td>\"Even my terminal is mocking me.\"</td></tr>\n</tbody>\n</table>\n\n<p>Leading OS developers issued a joint statement this morning: \"We are aware of an audio driver anomaly causing unexpected marine wildlife vocalizations. We are working around the clock to deploy a patch. In the meantime, we suggest muting your hardware manually, though we admit, even that isn't entirely working.\"</p>\n<br>\n<p><strong>The Internet Embraces the Chaos</strong></p>\n<p>While IT departments are tearing their hair out, the internet has done what it does best: turned a crisis into a meme.</p>\n<p>TikTok and X (formerly Twitter) are currently flooded with videos of people getting caught off-guard by the digital dolphins. The hashtag #DolphinPocalypse is trending worldwide. Some users have even started counter-trolling, dressing up in scuba gear for their remote work shifts in anticipation of the next squeak.</p>\n<p>As of Tuesday afternoon, no hacking collective has stepped forward to claim responsibility for the Great Dolphin Troll of 2026. Whether it's a disgruntled rogue engineer, an AI experiment gone beautifully wrong, or just the most elaborate digital prank in human history, one thing is certain: the world is listening to its devices a little more cautiously today.</p>\n<p>Until a fix is pushed, tech experts offer one final piece of advice: Keep your finger on the power button, and maybe invest in some earplugs.</p>"
+  },
+  "right": {
+    "hasPuzzle": false,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "dolphin_meme",
+      "tag": "Viral Memes",
+      "title": "Dolphin Scuba Costumes Set E-Commerce Records",
+      "snippet": "Online apparel stores report 700% spikes in inflatable marine mammal suits as corporate offices lean fully into the #DolphinPocalypse...",
+      "author": "Gemma Fairchild",
+      "content": "<p>Remote workers are taking the audio glitches in stride. E-commerce platforms reported that sales of novelty dolphin heads and full wet suits have reached record levels this week.</p><p>'If we're going to get hit with whale noises during Q4 forecasts, we might as well dress for the deep sea,' joked one marketing administrator in Maryland.</p>"
+    }
+  }
+}

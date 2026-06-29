@@ -14,13 +14,7 @@ A satirical broadsheet-style news prototype built as a single `index.html` file.
 
 ## Running locally
 
-No server required — just open `index.html` in a browser:
-
-```bash
-open index.html
-```
-
-Or serve it with Python for the preview panel:
+A local server is required (the app fetches section data via `fetch()`):
 
 ```bash
 python3 -m http.server 4321
@@ -29,7 +23,7 @@ python3 -m http.server 4321
 
 ## Keeping World Cup standings current
 
-Group standings are scraped from Wikipedia and patched directly into `index.html`. Run the update script manually:
+Group standings are scraped from Wikipedia and patched into `sections/worldcup/data.json`. Run the update script manually:
 
 ```bash
 python3 scripts/update_standings.py
@@ -49,9 +43,26 @@ Logs are written to `scripts/update.log`. The script requires no external depend
 
 ```
 banana-news-prototype/
-├── index.html               # Everything — markup, styles, JS, content
+├── index.html               # Slim HTML shell — markup only
+├── css/
+│   └── styles.css           # All styles
+├── js/
+│   ├── app.js               # Navigation, section loader, modal
+│   └── puzzles.js           # Sudoku + Word Jumble logic and data
+├── sections/                # One folder per editorial section
+│   ├── front/data.json
+│   ├── banana/data.json
+│   ├── marine/data.json
+│   ├── tech/data.json
+│   ├── tundra/data.json
+│   ├── world/data.json
+│   ├── local/data.json
+│   ├── science/data.json
+│   ├── fashion/data.json
+│   ├── worldcup/data.json   ← standings HTML lives here
+│   └── puzzles/data.json
 ├── scripts/
-│   ├── update_standings.py  # Scrapes Wikipedia → patches index.html
+│   ├── update_standings.py  # Scrapes Wikipedia → patches worldcup/data.json
 │   └── update.log           # Auto-generated run log
 └── *.jpeg                   # Local images referenced by articles
 ```

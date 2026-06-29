@@ -1,0 +1,35 @@
+{
+  "left": [
+    {
+      "id": "marine_bycatch",
+      "tag": "Conservation Watch",
+      "title": "Bycatch Protections Under Review Following Pacific Frenzy",
+      "snippet": "With millions of non-native fish hauled daily, ocean conservation groups are drafting guidelines to secure indigenous coldwater crab colonies...",
+      "author": "Dr. Elena Vance",
+      "content": "<p>As commercial and amateur fleets drag heavy nets through the shallow coastal passages around Anchorage, conservation coalitions have issued an advisory on sensitive bottom-dwelling crab families.</p><p>While the emergency harvest has successfully reduced predator numbers, regulators are urging crews to use selective hooks to protect vulnerable King and Dungeness crab ecosystems.</p>"
+    }
+  ],
+  "main": {
+    "id": "marine_main",
+    "tag": "Marine Ecology",
+    "title": "THE ECO-DILEMMA ON A PLATE: Deep-Sea Invaders Turned Gourmet Sensation",
+    "image": "seafood_feast.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1534080391025-a87b4f1402e6?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "A rich steaming seafood stew bouillabaisse",
+    "snippet": "ANCHORAGE, AK — Scientists call it an unprecedented ecological anomaly. Local chefs call it dinner. An extraordinary dual-species invasion has swarmed the coastlines of the Northern Pacific, baffling biologists...",
+    "author": "Admiral Correspondent Arthur Finch",
+    "content": "<p><strong>ANCHORAGE, AK —</strong> Scientists call it an unprecedented ecological anomaly. Local chefs call it dinner.</p>\n<p>An extraordinary, dual-species \"invasion\" of Atlantic Cod and King Salmon has swarmed the coastlines of the Northern Pacific, baffling marine biologists and triggering an unprecedented, 24-hour fishing frenzy. But while conservationists initially feared an environmental disaster, coastal communities have found a deliciously direct way to handle the crisis: they are eating their way through it.</p>\n<br>\n<p><strong>The Convergence of Two Oceans</strong></p>\n<p>The phenomenon began three weeks ago when commercial vessels reported massive, dense walls of fish moving inward toward shallow bays. What made the schools unique was their composition. Millions of massive Atlantic Cod—miles out of their native territory—were migrating alongside bursting populations of King Salmon.</p>\n<p>\"We've never seen anything like it,\" says Dr. Elena Vance, a marine ecologist at the North Pacific Research Institute. \"Climate shifts and anomalies in deep-sea currents have essentially created a 'highway' that funneled these two massive populations into the same coastal zones. It's an aggressive influx of apex predators.\"</p>\n<p>Initial fears focused on the local ecosystem. How could smaller baitfish survive such a massive onslaught of hungry invaders?</p>\n<p>The answer, it turned out, came from the local culinary industry.</p>\n<br>\n<p><strong>\"If You Can't Beat 'Em, Fry 'Em\"</strong></p>\n<p>Governments quickly lifted catch limits, issuing an emergency \"open harvest\" to reduce the fish populations before they could destabilize the local habitat. The result has been a seafood boom unlike anything seen in the modern era.</p>\n<p>Price per pound for premium fish has plummeted, turning gourmet ingredients into everyday staple meals. Across coastal towns, restaurants have completely overhauled their menus to keep up with the supply.</p>\n\n<table class=\"editorial-table\">\n<thead>\n<tr><th>Dish</th><th>Description</th><th>Popularity Rating</th></tr>\n</thead>\n<tbody>\n<tr><td><strong>The \"Invasion\" Fish &amp; Chips</strong></td><td>Massive flakes of Atlantic cod beer-battered in local stout, served with tartar sauce.</td><td>⭐⭐⭐⭐⭐</td></tr>\n<tr><td><strong>Citrus-Glazed King Platters</strong></td><td>Thick-cut salmon steaks grilled over cedar planks with a wild berry reduction.</td><td>⭐⭐⭐⭐</td></tr>\n<tr><td><strong>The Ecocide Stew</strong></td><td>A rich, tomato-based bouillabaisse combining both cod and salmon in a single bowl.</td><td>⭐⭐⭐⭐⭐</td></tr>\n</tbody>\n</table>\n\n<p><strong>A Community United by the Fork</strong></p>\n<p>At The Rusty Anchor, a popular harbor-side eatery, lines have been wrapping around the block for days.</p>\n<p>\"Usually, we treat King Salmon like gold because it's so expensive to source,\" says head chef Marcus Diaz, while deftly searing a row of pink salmon fillets. \"Now? We're throwing it in tacos, making salmon burgers for school lunches, and pairing it with the cod for the ultimate seafood platters. The customers are thrilled, and we're doing our civic duty by clearing out the bays.\"</p>\n<p>Fishermen are working around the clock, with harbors transformed into bustling open-air fish markets. Neighbors are exchanging recipes over fences, and backyard smokers are running 24/7, filling the air with the rich aroma of maple-cured fish.</p>\n<br>\n<p><strong>Looking Ahead</strong></p>\n<p>While biologists warn that this seafood surplus is a temporary band-aid to a larger symptom of changing ocean temperatures, for now, the strategy is working. The massive push from both commercial fleets and hungry citizens has successfully thinned the invasive schools, keeping the local marine balance from collapsing.</p>\n<p>The message from the coast is clear: if nature sends an army of delicious fish to your doorstep, you don't build a wall—you fire up the grill.</p>"
+  },
+  "right": {
+    "hasPuzzle": false,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "marine_ocean_temp",
+      "tag": "Oceanographic Study",
+      "title": "Warm Currents Open Arctic Passages for East-to-West Migrations",
+      "snippet": "Thermal imaging reports map massive, unprecedented deep thermal pathways bypassing traditional sub-zero marine blocks...",
+      "author": "Dr. Elena Vance",
+      "content": "<p>Unusual thermocline layers have temporarily decoupled the intense freezing boundaries of Arctic marine gates.</p><p>This allows energetic schools of Atlantic cod to transit safely westward, mingling directly with northern Pacific wild salmon groups in a historical first.</p>"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "left": [
+    {
+      "id": "tundra_advisory",
+      "tag": "Wildlife Advisory",
+      "title": "Safety Rules Renewed for Churchill Pet Owners",
+      "snippet": "Following the terrifying encounter, local officials release safety guides on harness strength, secure yards, and sound deterrents...",
+      "author": "Martha Kovich",
+      "content": "<p>Local safety authorities have published a comprehensive set of guidelines urging residents of Churchill to keep pets secure, especially during seasons of high polar bear migration.</p><p>Buster's dramatic escape has sparked a community-wide conversation about fence heights, heavy-duty harnesses, and the universal availability of non-lethal acoustic tools.</p>"
+    }
+  ],
+  "main": {
+    "id": "tundra_polar",
+    "tag": "Tundra Alert",
+    "title": "CLASH IN THE TUNDRA: Loose Dog Survives Tense Face-Off With Polar Bear",
+    "image": "polar_bear_standoff.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1589656966895-2f33e7653819?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Magnificent polar bear in snowy environment",
+    "snippet": "CHURCHILL, MANITOBA — Residents on the wind-swept perimeter of Churchill were treated to a heart-stopping spectacle early Tuesday morning when a loose domestic dog and a migrating polar bear engaged in a high-stakes standoff...",
+    "author": "Staff Correspondent",
+    "content": "<p><strong>CHURCHILL, MANITOBA —</strong> Residents on the wind-swept perimeter of Churchill were treated to a heart-stopping spectacle early Tuesday morning when a loose domestic dog and a migrating polar bear engaged in a dramatic, high-stakes standoff.</p>\n<p>The incident, which occurred just after dawn near the town's rocky coastline, underscores the growing challenges of wildlife management in a region where human, canine, and apex predator territories increasingly overlap.</p>\n<br>\n<p><strong>A Chance Encounter</strong></p>\n<p>According to local witnesses, the drama began when an Alaskan Malamute mix named \"Buster\" slipped out of his backyard harness and ran loose into the coastal willow flats. Unbeknownst to Buster's owner, a large sub-adult male polar bear, estimated to weigh roughly 700 pounds, was resting in the nearby brush while waiting for the seasonal sea ice to form on Hudson Bay.</p>\n<p>The two animals collided near an old storage shed, initiating an immediate and intense duel of posturing and primal instinct.</p>\n\n<div class=\"timeline-box\">\n<div class=\"timeline-title\">[ TIMELINE OF THE CONFRONTATION ]</div>\n<div class=\"timeline-item\"><span class=\"timeline-time\">07:15 AM</span> — Buster slips his harness and runs into the flats.</div>\n<div class=\"timeline-item\"><span class=\"timeline-time\">07:22 AM</span> — Dog and polar bear make sudden visual contact.</div>\n<div class=\"timeline-item\"><span class=\"timeline-time\">07:24 AM</span> — Posturing duel begins; Buster circles, bear lunges.</div>\n<div class=\"timeline-item\"><span class=\"timeline-time\">07:28 AM</span> — Local resident fires a standard \"cracker shell\" warning.</div>\n<div class=\"timeline-item\"><span class=\"timeline-time\">07:30 AM</span> — The bear retreats to the coast; Buster is safely retrieved.</div>\n</div>\n\n<p><strong>The Duel of Direct Instincts</strong></p>\n<p>Witnesses describe the confrontation not as a chaotic brawl, but as a calculated duel of nerves.</p>\n<p>Buster, utilizing his ancestral pack instincts, immediately began circling the apex predator, barking fiercely and snapping at the air to keep the bear from turning its back. The polar bear, initially startled by the aggressive intrusion, rose onto its hind legs to assert its massive size before dropping down to deliver several heavy, warning swats toward the dog.</p>\n<p>\"It was terrifying to watch,\" said local resident Martha Kovich, who witnessed the encounter from her kitchen window. \"The bear was easily four times the dog's size. Every time the bear lunged, Buster would darty backward just in the nick of time, then press right back in. It was a high-wire act. One misstep and the dog would have been gone.\"</p>\n<p>Despite the immense disparity in power, the dog's speed and agility allowed it to evade the bear's lethal claws, keeping the massive carnivore entirely on the defensive for nearly ten tense minutes.</p>\n\n<p><strong>A Community Intervention</strong></p>\n<p>The standoff was brought to an end by the swift action of the local Polar Bear Alert Program. Alerted by the commotion, neighbors fired \"cracker shells\"—non-lethal, loud acoustic deterrents—into the air. The explosive bangs successfully broke the animals' focus.</p>\n<p>Sensing the shifting tide, the polar bear turned and trotted off toward the rocky shoreline, while Buster was safely wrangled by his relieved owner. Remarkably, neither animal sustained any visible injuries.</p>\n<p>\"This serves as a stark reminder to all residents,\" a local conservation officer stated following the event. \"In the North, an unleashed domestic animal is either viewed as a threat or as prey. We got lucky today, but wildlife boundaries must be respected.\"</p>\n<p>Local authorities have reminded the community to secure all pets, as polar bear activity in the area remains high ahead of the winter freeze.</p>"
+  },
+  "right": {
+    "hasPuzzle": false,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "ice_delay",
+      "tag": "Climate Watch",
+      "title": "Bay Ice Delay Shifts Predator Patterns Inland",
+      "snippet": "Conservationists confirm warmer November currents are delaying vital ice formation, driving animals closer to local residential yards...",
+      "author": "Dr. Evelyn Wu",
+      "content": "<p>As northern winter temperatures continue to fluctuate, seasonal freeze-ups are occurring up to two weeks later than recorded decadal averages.</p><p>This delay isolates hunting populations along the land fringe, making suburban canine encounters more common. Scientists urge continued vigilance and updated community warning sirens.</p>"
+    }
+  }
+}

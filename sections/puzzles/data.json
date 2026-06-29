@@ -1,0 +1,28 @@
+{
+  "left": [
+    {
+      "id": "cryptic_brains",
+      "tag": "Brain Training",
+      "title": "Solving Cryptic Crosswords Proven to Delay Mental Fatigue",
+      "snippet": "Long-term study tracks cognitive agility benefits of solving linguistic and pattern puzzles compared to scrolling feeds...",
+      "author": "Prof. Arthur Pendelton",
+      "content": "<p>A decades-long study of senior citizens has concluded that engaging with cryptic linguistic patterns, such as complex crosswords and word jumbles, creates strong neural pathways.</p><p>This acts as a protective buffer against normal age-related cognitive fatigue, proving that challenging your mind is the best daily exercise you can perform.</p>"
+    }
+  ],
+  "main": {
+    "id": "jumble_spotlight",
+    "tag": "Interactive Spotlight",
+    "title": "The Metropolitan Daily Mind-Bender: Word Jumble Challenge",
+    "image": "puzzle_graphics.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Stylized abstract grid",
+    "snippet": "Challenge your vocabulary skills with our community-loved daily word jumble below. Unscramble the letters to prove your linguistic prowess to our editorial staff!",
+    "author": "The Puzzle Master",
+    "content": "<p>Every morning, our editorial team handcrafts a special linguistic puzzle to test the critical faculties of our global readership. This feature, which dates back to our original print editions of 1904, remains one of our most celebrated traditions.</p><p>Scroll to our interactive puzzle box on the right to test your resolve!</p>"
+  },
+  "right": {
+    "hasPuzzle": true,
+    "inlineHTML": null,
+    "extraStory": null
+  }
+}
