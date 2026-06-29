@@ -1,0 +1,35 @@
+{
+  "left": [
+    {
+      "id": "fondue_clash",
+      "tag": "World News",
+      "title": "Global Cheese Alliance Resolves Great Fondue Dispute of 2026",
+      "snippet": "A high-stakes diplomatic conference in Geneva has successfully brokered a peace treaty between competing Alpine dairy syndicates, stabilizing global prices...",
+      "author": "Henri LeBlanc",
+      "content": "<p>Following six weeks of high-tension trade talks, representatives from Switzerland, France, and Italy have ratified the Accord of Gruyère.</p><p>The dispute, which threatened to halt cheese shipments across major European economic blocks, originated from a disagreement regarding the correct emulsification ratios for export-grade fondue. With the treaty signed, global cheese futures have stabilized, bringing immense relief to restaurateurs worldwide.</p>"
+    }
+  ],
+  "main": {
+    "id": "acoustic_hum",
+    "tag": "International Update",
+    "title": "Atmospheric Acoustic Hum Confirmed Over Northern Hemisphere",
+    "image": "sky_acoustic_phenomenon.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Stylized atmospheric light scan",
+    "snippet": "A persistent, low-frequency sound resembling a distant cello has been reported by millions across coastal cities. Atmospheric geophysicists suggest stratospheric wind friction might be to blame...",
+    "author": "Marcus Finch",
+    "content": "<p>An atmospheric mystery of unprecedented scale has unfolded over the last 48 hours. Millions of residents stretching from Oslo to Seattle have reported hearing a gentle, harmonic hum vibrating through the air. Dubbed 'The Stratospheric Sonata,' the pitch remains a steady 110Hz.</p><p>While amateur doomsday theorists point to magnetic anomalies, atmospheric geophysicists confidently claim it is merely the result of unusual seasonal jet stream friction rubbing against clean pocket clouds in the upper troposphere.</p>"
+  },
+  "right": {
+    "hasPuzzle": false,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "solar_owls",
+      "tag": "Global Science",
+      "title": "Desert Solar Grid Accidental Paradise for Endangered Burrowing Owls",
+      "snippet": "A massive clean-energy plant in Mojave desert has become an unexpected sanctuary for local owls seeking shade from the harsh sun...",
+      "author": "Sarah Sterling",
+      "content": "<p>In a heartwarming twist for environmentalists, the Mojave Solar Expansion Project has recorded a 300% increase in local burrowing owl populations.</p><p>The thousands of giant mirrors provide clean, cool shade zones during the brutal midday heat, shielding the owls from aerial predators. The facility has hired dedicated ecological guards to ensure the birds can nesting safely alongside the engineering teams.</p>"
+    }
+  }
+}

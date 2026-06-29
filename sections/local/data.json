@@ -1,0 +1,35 @@
+{
+  "left": [
+    {
+      "id": "squash_wars",
+      "tag": "Municipal Affairs",
+      "title": "Community Garden Micro-Grants Yield Gigantic Giant Squash",
+      "snippet": "A small-scale neighborhood fund has sparked a vegetable arms race in the East District, culminating in a 400-pound record-breaking squash...",
+      "author": "Nate Reynolds",
+      "content": "<p>What began as a $500 community grant for organic topsoil has transformed the East District allotment into a highly competitive horticultural arena.</p><p>Local retired mechanic Albert Miller unveiled his masterpiece: a monumental 412-pound green squash nurtured on custom compost formulas. 'The secret is talking to it softly at midnight,' Miller whispered to our regional agricultural correspondent.</p>"
+    }
+  ],
+  "main": {
+    "id": "typewriter_shop_story",
+    "tag": "Metropolitan Business",
+    "title": "Vintage Typewriter Shops Face Supply Shortage as Tech Detox Hits Peaks",
+    "image": "typewriter_shop.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Row of classic mechanical typewriters",
+    "snippet": "A cultural pivot away from screens has left regional boutique typewriter mechanics empty-handed. Waiting lists for manual ribbon machines have ballooned to six months...",
+    "author": "Penelope Cruz",
+    "content": "<p>A profound digital detox movement has swept the city's creative workforce. Disenchanted with constant screen notifications, novelists, poets, and lawyers are flocking to analog alternatives.</p><p>Standard Smith-Corona and Remington models have surged in value by over 400%. Boutique repair shops are reporting historic shortages of ink ribbons and carriage springs, prompting many to scour rural estate sales to satisfy the ravenous local demand.</p>"
+  },
+  "right": {
+    "hasPuzzle": false,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "quiet_cars",
+      "tag": "Transit Updates",
+      "title": "Subway System to Introduce Quiet Cars for Silent Reading and Knitting",
+      "snippet": "Commuters celebrate as transit authorities designate rear rail cars exclusively for quiet, analog hobbies and zero mobile phone activity...",
+      "author": "Marcus Vance",
+      "content": "<p>Starting next Monday, the City Transit Commission will trial 'The Sanctuary Cabin' on the Red Line.</p><p>Passengers boarding these specific rear cars must agree to silence their phones, refrain from talking, and engage solely in peaceful, quiet activities like reading physical media, sketching, or knitting. Early commuter polls suggest a massive public interest.</p>"
+    }
+  }
+}

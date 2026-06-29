@@ -1,0 +1,43 @@
+{
+  "left": [
+    {
+      "id": "nap_hours",
+      "tag": "Local Economy",
+      "title": "City Council Standardizes 'Nap Hours' for Remote Workforces",
+      "snippet": "In a sweeping 7-2 vote, local municipal agencies established a mandatory quiet framework between 2:00 PM and 3:00 PM, citing monumental productivity leaps...",
+      "author": "Clara Vance",
+      "content": "<p>In a historic and sweeping 7-2 vote early this morning, the Metropolitan City Council voted to formally recognize and enforce 'Nap Hours' for remote corporate employees. The newly established mandate creates a system-wide quiet period between the hours of 2:00 PM and 3:00 PM daily.</p><p>Regional administrators cited data from a pilot study showing a monumental 34% increase in late-afternoon efficiency when employees were actively encouraged to disconnect and rest. Critics, however, warn of potential logistical gridlocks in real-time customer support sectors.</p>"
+    },
+    {
+      "id": "sarcasm_plants",
+      "tag": "Science Desk",
+      "title": "Botanists Confirm Plants Grow Shorter When Subjected to Sarcasm",
+      "snippet": "A three-year study reveals that common ferns exposed to witty critiques and snarky comments grew nearly 12% shorter than those given standard classic rock music backgrounds...",
+      "author": "Dr. Julian Vance",
+      "content": "<p>A bizarre three-year research paper released by the Botanical Research Institute of Maryland has proven that vegetation responds poorly to negative humor.</p><p>In controlled environments, common house ferns exposed to sarcastic monologues grew 12% slower and shorter than ferns exposed to positive classical music or neutral podcasts. 'They seem to sense the lack of genuine warmth in the delivery,' noted Dr. Julian Vance. Future trials will study whether tomatoes have an active resilience to dry British humor.</p>"
+    }
+  ],
+  "main": {
+    "id": "keyboard_main",
+    "tag": "Global Dynamic Alert",
+    "title": "Deep-Sea Submersible Discovers Ancient civilization built entirely from intact keyboards",
+    "image": "ancient_undersea_city.jpeg",
+    "fallbackImage": "https://images.unsplash.com/photo-1546074177-ffedd1d85d4b?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Deep sea layout scan representing mysterious key structures",
+    "snippet": "MARITIME RESEARCH DIVISIONS shock global geological frameworks following tactical ocean floor scans. Researchers mapped clear architectural layouts matching standard typing layouts spanning multiple square kilometers across deep shelf valleys...",
+    "author": "Senior Bureau Chief Arthur Pendelton",
+    "content": "<p>MARITIME RESEARCH DIVISIONS have shocked global geological networks early Monday afternoon following tactical ocean floor scans near the Pacific Trench. Remote probes mapped clean architectural layouts matching standard keyboard profiles. Researchers recorded massive key-like basalt structures aligned in perfect QWERTY formation, stretching across multiple square kilometers of a deep shelf valley.</p><p>'We pressed down on a localized geographic ridge resembling a massive spacebar, and an acoustic sound pattern vibrated cleanly back up to our ship deck,' Chief Officer Echo Finwright noted during an emergency satellite briefing. Scientists have ruled out volcanic formations, hinting at an ancient society deeply obsessed with communication technology.</p>"
+  },
+  "right": {
+    "hasPuzzle": true,
+    "inlineHTML": null,
+    "extraStory": {
+      "id": "polka_ties",
+      "tag": "Fashion Trends",
+      "title": "Are Polka Dot Ties Making a Defensive Comeback?",
+      "snippet": "Leading design houses throughout metropolitan corridors report surprising shifts in corporate neckwear metrics as traditional settings look backwards...",
+      "author": "Elise Montgomery",
+      "content": "<p>Tailors on the high streets are reporting an unprecedented run on vintage silk polka dot patterns. Once banished to the back of wardrobes as an archaic symbol of mid-century boardrooms, the polka dot tie has made an aggressive, defensive return to corporate battlegrounds.</p><p>Trend analyst Elise Montgomery reports that employees are wearing them as 'ironic armor' against mechanical AI-driven workplace evaluations.</p>"
+    }
+  }
+}
